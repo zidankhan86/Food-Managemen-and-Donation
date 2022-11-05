@@ -3,7 +3,7 @@
 @section('content')
 <h5 style="text-align:center ;">Organization</h5>
 <div class="btn btn-success" >
-<a href="{{url('/organization')}}" style="color:white">Edit Organization</a>
+<a href="{{url('/organization/form')}}" style="color:white">Edit Category</a>
 </div>
 <table class="table">
   <thead>

@@ -1,7 +1,6 @@
 @extends('backend.admin')
 @section('content')
-
-<form  href="{{url('/organization')}}"></a>
+<form action="{{url('/help/form')}}">
   <div class="form-group">
     <label for="organization_form">Your Name</label>
     <input type="text" class="form-control" id="organization_form" aria-describedby="emailHelp" placeholder="Enter Name">
@@ -14,5 +13,5 @@
   
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-
 @endsection
+

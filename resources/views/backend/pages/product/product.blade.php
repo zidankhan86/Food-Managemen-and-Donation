@@ -1,6 +1,5 @@
 @extends('backend.admin')
 @section('content')
-
-sdfsdfsdfsdfsd
+fdgfgf
 
 @endsection

@@ -1,6 +1,6 @@
 @extends('backend.admin')
 @section('content')
-<form>
+<form href="{{url('/category')}}"></a>
   <div class="form-group">
     <label for="category_form">Your Name</label>
     <input type="text" class="form-control" id="category_form" aria-describedby="emailHelp" placeholder="Enter Name">

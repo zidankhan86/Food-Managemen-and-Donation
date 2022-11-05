@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function list(){
-        return  view('backend.pages.restaurent.products.product');
+    public function product(){
+        return  view('backend.pages.product.product');
     
 
     }

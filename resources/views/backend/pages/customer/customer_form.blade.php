@@ -1,7 +1,6 @@
-@extends('backend.admin')
+@extends('backend.customer')
 @section('content')
-
-<form  href="{{url('/organization')}}"></a>
+<form  href="{{url('/customer')}}"></a>
   <div class="form-group">
     <label for="organization_form">Your Name</label>
     <input type="text" class="form-control" id="organization_form" aria-describedby="emailHelp" placeholder="Enter Name">
@@ -16,3 +15,4 @@
 </form>
 
 @endsection
+

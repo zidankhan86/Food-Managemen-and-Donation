@@ -11,6 +11,9 @@ class OrganizationController extends Controller
 return view('backend.pages.organization.organization');
 
     }
-   
+   public function organization_form(){
+
+    return view('backend.pages.organization.organization_form');
+   }
 
 }
