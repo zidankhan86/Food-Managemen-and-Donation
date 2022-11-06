@@ -12,7 +12,7 @@
                     <li class="label">Apps</li>
                     <li><a href="{{url('/category')}}" ><i class="ti-bar-chart-alt"></i> Category </a>
                     </li>
-                    <li><a href="{{url('/restaurant')}}"><i class="ti-calendar"></i> Restaurant </a></li>
+                    <li><a href="{{url('/restaurent')}}"><i class="ti-calendar"></i> Restaurant </a></li>
                     
                     <li><a href="{{url('/customer')}}"><i class="ti-layout"></i> Customers </a>
 

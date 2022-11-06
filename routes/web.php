@@ -29,10 +29,11 @@ Route::get('/',[HomeController::class,'admin']);
 Route::get('/dashboard',[DashboardController::class,'Dashboard']);
 
 Route::get('/product',[ProductController::class,'product']);
-Route::get('/product_form',[ProductController::class,'product_list']);
+Route::get('/product/form',[ProductController::class,'product_list']);
 
-Route::get('/customer',[CustomerController::class,'Customer']);
+Route::get('/customer',[CustomerController::class,'Customer'])->name("customer.list");
 Route::get('/customer/form',[CustomerController::class,'customer_form']);
+Route::post("/customer/store", [CustomerController::class,"store"])->name("customer.store");
 
 Route::get('/branch',[BranchController::class,'Branch']); 
 
@@ -49,3 +50,4 @@ Route::get('/restaurent',[RestaurantController::class,'restaurant']);
 Route::get('/restaurent/form',[RestaurantController::class,'restaurant_form']);
 
 Route::get('/donate',[DonateController::class,'donate']);
+Route::get('/donate/form',[DonateController::class,'donate_form']);

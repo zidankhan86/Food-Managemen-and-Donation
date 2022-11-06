@@ -10,5 +10,10 @@ class DonateController extends Controller
 
 return view('backend.pages.donate.donate');
     }
+    public function donate_form(){
+
+        return view('backend.pages.donate.donate_form');
+            }
+
     
 }

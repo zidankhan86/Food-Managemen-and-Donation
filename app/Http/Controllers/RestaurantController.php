@@ -9,8 +9,14 @@ class RestaurantController extends Controller
     public function restaurant(){
 
         return view('backend.pages.restaurent.restaurent');
+    
     }
-    public function restaurent_form(){
-        return view('backend.pages.restaurent.restaurent_form');
-    }
+    
+        public function restaurant_form(){
+    
+            return view('backend.pages.restaurent.restaurent_form');
+        }
+
+
 }
+

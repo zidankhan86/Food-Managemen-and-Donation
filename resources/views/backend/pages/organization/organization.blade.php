@@ -3,7 +3,7 @@
 @section('content')
 <h5 style="text-align:center ;">Organization</h5>
 <div class="btn btn-success" >
-<a href="{{url('/organization/form')}}" style="color:white">Edit Category</a>
+<a href="{{url('/organization/form')}}" style="color:white">Edit </a>
 </div>
 <table class="table">
   <thead>
@@ -13,6 +13,7 @@
       <th scope="col">Org ID</th>
       <th scope="col">Org Status</th>
       <th scope="col">Org Description</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -22,6 +23,7 @@
       <td>1231</td>
       <td>active/not-active</td>
       <td>Social</td>
+      <td>On/OFF</td>
     </tr>
   </tbody>
 </table>
