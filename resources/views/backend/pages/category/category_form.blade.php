@@ -1,24 +1,30 @@
 @extends('backend.admin')
 @section('content')
-<form action="{{url('/category')}}">
+<form action="{{url('/category/store')}}" method="POST">
+  @csrf
   <div class="form-group">
-    <label for="category_name">Enter Category Name</label>
-    <input type="text" class="form-control" name="category_name" aria-describedby="emailHelp" placeholder="Enter Category Name">
+    <label for="name">Enter Category Name</label>
+    <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Enter Category Name">
   </div>
 
   <div class="form-group">
-    <label for="category_id">Category ID</label>
+    <label for="c_type">Category Type</label>
     
-    <input type="text" class="form-control" name="category_id" placeholder="Enter Your Product Type">
+    <input type="text" id="type" class="form-control" name="c_type" placeholder="Enter Category Type">
   </div>
   <div class="form-group">
-    <label for="category_status">Category Status</label>
-    <input type="text" class="form-control" name="category_status" placeholder="Select Category Status">
+    <label for="status">Category Status</label>
+
+
+    <select id="status" name="status" class="form-control">
+      <option value="active">Active</option>
+      <option value="inactive">Inactive</option>
+    </select>
     
   </div>
   <div class="form-group">
-    <label for="category_img">Category Image</label>
-    <input type="file" class="form-control" name="category_img" placeholder="Select Category Status">
+    <label for="img">Category Image</label>
+    <input type="file" class="form-control" name="img" placeholder="Select Category image">
   </div>
   
   <label for="foods">Choose a Meal:</label>

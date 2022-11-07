@@ -42,6 +42,7 @@ Route::get('/organization/form',[OrganizationController::class,'Organization_for
 
 Route::get('/category',[CategoryCotroller::class,'Category']);
 Route::get('/category/form',[CategoryCotroller::class,'Category_form']);
+Route::post('/category/store',[CategoryCotroller::class,"store"]);
 
 Route::get('/help',[HelpController::class,'Help']);
 Route::get('/help/form',[HelpController::class,'help_form']);
