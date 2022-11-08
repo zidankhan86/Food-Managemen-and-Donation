@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Restaurent;
 use Illuminate\Http\Request;
 
 class RestaurantController extends Controller
@@ -16,7 +17,17 @@ class RestaurantController extends Controller
     
             return view('backend.pages.restaurent.restaurent_form');
         }
+public function store( request $req){
+   // dd($req->all);
 
+    Restaurent::create([
+        "name"=>$req->name,
+        "location"=>$req->location,
+        "image"=>$req->image,
+        "description"=>$req->description
+
+]);
+}
 
 }
 

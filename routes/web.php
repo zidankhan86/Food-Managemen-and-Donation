@@ -30,6 +30,7 @@ Route::get('/dashboard',[DashboardController::class,'Dashboard']);
 
 Route::get('/product',[ProductController::class,'product']);
 Route::get('/product/form',[ProductController::class,'product_list']);
+Route::post('/product/store',[ProductController::class,'store']);
 
 Route::get('/customer',[CustomerController::class,'Customer'])->name("customer.list");
 Route::get('/customer/form',[CustomerController::class,'customer_form']);
@@ -49,6 +50,7 @@ Route::get('/help/form',[HelpController::class,'help_form']);
 
 Route::get('/restaurent',[RestaurantController::class,'restaurant']);
 Route::get('/restaurent/form',[RestaurantController::class,'restaurant_form']);
+Route::post('/restaurent/store',[RestaurantController::class,"store"])->name("restaurent.store");
 
 Route::get('/donate',[DonateController::class,'donate']);
 Route::get('/donate/form',[DonateController::class,'donate_form']);

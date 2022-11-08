@@ -2,27 +2,28 @@
 @section('content')
 <form href="{{url('/category')}}"></a>
   <div class="form-group">
-    <label for="product_form">Enter Product Name</label>
-    <input type="text" class="form-control" id="product_form" aria-describedby="emailHelp" placeholder="Enter product Name">
+    <label for="name">Enter Product Name</label>
+    <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Enter product Name">
   </div>
   
   <div class="form-group">
-    <lebel for="producttype">Product ID</lebel>
-    <input type="text" class="form-control" id="producttype" placeholder="Enter a product id ">
+    <lebel for="category">Product Category</lebel>
+    <input type="text" class="form-control" name="category" placeholder="Enter a product category ">
   </div>
   <div class="form-group">
-    <lebel for="producttype">Price</lebel>
-    <input type="text" class="form-control" id="producttype" placeholder="Enter a product Price ">
+    <lebel for="price">Price</lebel>
+    <input type="text" class="form-control" name="price" placeholder="Enter a product Price ">
   </div>
   
   <div class="form-group">
-    <textarea for="productdescription">Description</textarea>
-    <input type="text" class="form-control" id="productdescription" placeholder="Enter a product Description ">
+    <lebel for="stock">Stock</lebel>
+    <input type="text" class="form-control" name="stock" placeholder="Enter a product Stock ">
   </div>
+  
 
   <div class="form-group">
-    <label for="images">Product Image</label>
-    <input type="file" class="form-control" id="images" placeholder="img">
+    <label for="image">Product Image</label>
+    <input type="file" class="form-control" name="image" placeholder="img">
   </div>
 
   <div>

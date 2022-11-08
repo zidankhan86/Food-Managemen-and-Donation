@@ -1,27 +1,29 @@
 @extends('backend.admin')
 @section('content')
 <div class="container">
-<form href="{{url('/category')}}"></a>
+<form action="{{route('restaurent.store')}}" method="post"> 
+  @csrf
   <div class="form-group">
-    <label for="category_form">Enter Restaurent Name</label>
-    <input type="text" class="form-control" id="category_form" aria-describedby="emailHelp" placeholder="Enter Your Name">
+    <label for="name">Enter Restaurent Name</label>
+    <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Enter Restaurant Name">
   </div>
   
   <div class="form-group">
-    <label for="producttype">Enter Restaurent ID</label>
-    <input type="text" class="form-control" id="producttype" placeholder="Enter ID">
+    <label for="location">Enter Restaurent Location</label>
+    <input type="text" class="form-control" name="location" placeholder="Enter Location">
   </div>
 
   
 
   <div class="form-group">
-    <label for="images">Choose an Image</label>
-    <input type="file" class="form-control" id="images" placeholder="img">
+    <label for="image">Choose an Image</label>
+    <input type="file" class="form-control" name="image" placeholder="img">
   </div>
 
   <div class="form-group">
-    <textarea for="category_forma">Enter Restaurent Name</textarea>
-    <input type="text" class="form-control" id="category_forma" aria-describedby="emailHelp" placeholder="Enter Description">
+    <textarea for="description">Enter Restaurent Description</textarea>
+    <input type="text" class="form-control" name="description" aria-describedby="emailHelp" placeholder="Enter Description">
+    
   </div>
 
   <div>
@@ -29,12 +31,12 @@
   <select name="food" id="foods">
     <option value="rice">Food</option>
     <option value="Vegitable">Others</option>
-    
   </select>
   </div>
   
   <button type="submit" class="btn btn-success">Submit</button>
+
 </form>
-</div>
+
 
 @endsection
