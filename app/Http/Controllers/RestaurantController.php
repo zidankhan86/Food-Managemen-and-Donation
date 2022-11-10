@@ -8,8 +8,9 @@ use Illuminate\Http\Request;
 class RestaurantController extends Controller
 {
     public function restaurant(){
-
-        return view('backend.pages.restaurent.restaurent');
+        $restaurant=Restaurent::paginate(5);
+        return view('backend.pages.restaurent.restaurent',compact('restaurant'));
+       
     
     }
     
@@ -27,6 +28,7 @@ public function store( request $req){
         "description"=>$req->description
 
 ]);
+return redirect()->route('restaurant.list');
 }
 
 }

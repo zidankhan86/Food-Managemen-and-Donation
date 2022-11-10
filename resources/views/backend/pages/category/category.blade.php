@@ -3,41 +3,46 @@
 @section('content')
 <h5 style="text-align:center ;">Category List</h5>
 <div class="btn btn-primary" >
-<a href="{{url('/category/form')}}" style="color:white">Edit Category</a>
+<a href="{{url('/category/form')}}" style="color:white">Add Category</a>
 </div>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Category Name</th>
-      <th scope="col"> ID</th>
-      <th scope="col"> Status</th>
-      <th scope="col">Image</th>
-      <th scope="col">Description</th>
-      <th scope="col">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>101</td>
-      <td>oyyo</td>
-      <td>active/not-active</td>
-      <td>category description</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>101</td>
-      <td>oyyo</td>
-      <td>active/not-active</td>
-      <td>category description</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>101</td>
-      <td>oyyo</td>
-      <td>active/not-active</td>
-      <td>category description</td>
-    </tr>
-  </tbody>
-</table>
+
+    
+                        <!-- /# column -->
+                        <div class="col-lg-11">
+                            <div class="card">
+                                
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover ">
+                                            <thead>
+                                                <tr>
+                                                    
+                                                    <th scope="col"> ID</th>
+                                                    <th scope="col">Category Name</th>
+                                                    <th scope="col">Cateroy Type</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach($category as $data)
+                                               
+                                                <tr>
+                                                    <td scope="col">{{$data->id}}</td>
+                                                    <td scope="col">{{$data->name}}</td>
+                                                    <td scope="col">{{$data->c_type}}</td>
+                                                    <td scope="col">{{$data->status}}</td>                                                    
+                                                    <td scope="col">
+                                                        <a href="">delete</a>
+                                                        <a href="">Edit</a>
+                                                        <a href="">Update</a>
+                                                    </td>                                                    <td>Add/Delet/edit</td>
+                                                    
+                                                </tr>
+                                                @endforeach
+
+                                               
+                                              
+                                            </tbody>
+                                        </table>
 @endsection

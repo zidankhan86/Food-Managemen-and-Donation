@@ -17,7 +17,7 @@
                     <li><a href="{{url('/customer')}}"><i class="ti-layout"></i> Customers </a>
 
                     </li>
-                    <li><a href="{{url('/product')}}"><i class="ti-map"></i> Product </a>
+                    <li><a href="{{route('product.list')}}"><i class="ti-map"></i> Product </a>
                     </li>
                         
                     </li>

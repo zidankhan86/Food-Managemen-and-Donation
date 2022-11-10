@@ -8,7 +8,9 @@ use Illuminate\Http\Request;
 class CategoryCotroller extends Controller
 {
     public function Category(){
-        return view('backend.pages.category.category');
+        $category=Category::all();
+
+        return view('backend.pages.category.category',compact('category'));
     }
     public function Category_form(){
         return view('backend.pages.category.category_form');
@@ -18,10 +20,9 @@ class CategoryCotroller extends Controller
  
         Category::create([
             "name" =>$req->name,
-            "image" =>$req->image,
             "c_type" =>$req->c_type,
-            "status" =>$req->status
-        
+            "status" =>$req->status,
+            
          ]);  
         return redirect()->back();
 

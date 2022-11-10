@@ -28,9 +28,9 @@ use App\Http\Controllers\RestaurantController;
 Route::get('/',[HomeController::class,'admin']);
 Route::get('/dashboard',[DashboardController::class,'Dashboard']);
 
-Route::get('/product',[ProductController::class,'product']);
-Route::get('/product/form',[ProductController::class,'product_list']);
-Route::post('/product/store',[ProductController::class,'store']);
+Route::get('/product',[ProductController::class,'product_list'])->name('product.list');
+Route::get('/product/form',[ProductController::class,'product_form'])->name('product.form');
+Route::post('/product/store',[ProductController::class,'product_store'])->name('product.store');
 
 Route::get('/customer',[CustomerController::class,'Customer'])->name("customer.list");
 Route::get('/customer/form',[CustomerController::class,'customer_form']);
@@ -48,7 +48,7 @@ Route::post('/category/store',[CategoryCotroller::class,"store"]);
 Route::get('/help',[HelpController::class,'Help']);
 Route::get('/help/form',[HelpController::class,'help_form']);
 
-Route::get('/restaurent',[RestaurantController::class,'restaurant']);
+Route::get('/restaurent',[RestaurantController::class,'restaurant'])->name('restaurant.list');
 Route::get('/restaurent/form',[RestaurantController::class,'restaurant_form']);
 Route::post('/restaurent/store',[RestaurantController::class,"store"])->name("restaurent.store");
 

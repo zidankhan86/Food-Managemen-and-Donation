@@ -1,13 +1,11 @@
 @extends('backend.admin')
 @section('content')
-
-<h5 style="text-align:center ;">Customer List</h5>
+<h5 style="text-align:center ;">Product List</h5>
 <div class="btn btn-success" >
-<a href="{{url('/customer/form')}}" style="color:white">Add Customer</a>
+<a href="{{route('product.form')}}" style="color:white">Add Product</a>
 </div>
-
-<!-- /# column -->
-<div class="col-lg-11">
+ <!-- /# column -->
+ <div class="col-lg-11">
                             <div class="card">
                                 
                                 <div class="card-body">
@@ -16,11 +14,14 @@
                                             <thead>
                                                 <tr>
                                                     <th>SL</th>
-                                                    <th>Customer ID</th>
-                                                    <th>Customer Name</th>
-                                                    <th>Customer E-mail</th>
-                                                    <th>Address</th>
-                                                    <th>Contract</th>
+                                                    <th>Product ID</th>
+                                                    <th>Product Name</th>
+                                                    <th>Product Type</th>
+                                                    <th>Product Category</th>
+                                                    <th> Color</th>
+                                                    <th> Price</th>
+                                                    <th> Description</th>
+                                                    <th> Stock</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -33,21 +34,10 @@
                                                     <td><span class="badge badge-danger">Extended</span></td>
                                                     <td>January 25</td>
                                                     <td class="color-danger">$14.85</td>
-                                                    <td>January 25</td>
-                                                    <td class="color-danger">$14.85</td>
-                                                    
-
-                                                    
-                                                </tr>
-                                               
-                                                <tr>
-                                                    <th scope="row">4</th>
-                                                    <td>Blue Backpack For Baby</td>
-                                                    <td><span class="badge badge-danger">Extended</span></td>
-                                                    <td>January 25</td>
-                                                    <td class="color-danger">$14.85</td>
-                                                    <td class="color-danger">$14.85</td>
-                                                    <td class="color-danger">$14.85</td>
+                                                    <td>Add/Delete</td>
+                                                    <td>Add/Delete</td>
+                                                    <td>Add/Delete</td>
+                                                    <td>Add/Delete</td>
                                                     
                                                 </tr>
                                                
@@ -57,13 +47,31 @@
                                                     <td><span class="badge badge-danger">Extended</span></td>
                                                     <td>January 25</td>
                                                     <td class="color-danger">$14.85</td>
+                                                    <td>Add/Delete</td>
+                                                    <td>Add/Delete</td>
+                                                    <td>Add/Delete</td>
+                                                    <td>Add/Delete</td>
+                                                    <td>Add/Delete</td>
+                                                </tr>
+                                               
+                                                <tr>
+                                                    <th scope="row">4</th>
+                                                    <td>Blue Backpack For Baby</td>
+                                                    <td><span class="badge badge-danger">Extended</span></td>
+                                                    <td>January 25</td>
                                                     <td class="color-danger">$14.85</td>
-                                                    <td class="color-danger">$14.85</td>
-                                                    
+                                                    <td>Add/Delete</td>
+                                                    <td>Add/Delete</td>
+                                                    <td>Add/Delete</td>
+                                                    <td>Add/Delete</td>
+                                                    <td>Add/Delete</td>
                                                 </tr>
                                               
                                             </tbody>
                                         </table>
+
+
+
 
 
 @endsection

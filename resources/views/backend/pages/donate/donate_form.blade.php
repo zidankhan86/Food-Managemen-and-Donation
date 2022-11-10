@@ -2,23 +2,25 @@
 @section('content')
 <form action="{{url('/donate')}}">
   <div class="form-group">
-    <label for="donaitor_name">Enter Donaitor Name</label>
-    <input type="text" class="form-control" name="donaitor_name" aria-describedby="emailHelp" placeholder="Enter Donaitor Name">
-  </div>
+    <h4>Donate Form</h4>
+    <lebel>Enter Donatior Name</lebel>
+
+   <input type="text" class="form-control input-rounded" name="name" placeholder="Enter Donatior Name">
+   </div>
 
   <div class="form-group">
     <label for="donation_amount">Donation Amount</label>
     
-    <input type="text" class="form-control" name="donation_amount" placeholder="Enter Amount">
+    <input type="text" class="form-control input-rounded" name="donation_amount" placeholder="Enter Amount">
   </div>
   <div class="form-group">
     <label for="status"> Status</label>
-    <input type="text" class="form-control" name="status" placeholder="Select Status">
+    <input type="text" class="form-control input-rounded" name="status" placeholder="Select Status">
     
   </div>
   <div class="form-group">
     <label for="img">Donation Image</label>
-    <input type="file" class="form-control" name="img" placeholder="Select an Image">
+    <input type="file" class="form-control input-roundedl" name="img" placeholder="Select an Image">
   </div>
   
 </form>
