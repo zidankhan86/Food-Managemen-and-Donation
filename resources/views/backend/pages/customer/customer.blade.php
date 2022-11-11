@@ -15,52 +15,34 @@
                                         <table class="table table-hover ">
                                             <thead>
                                                 <tr>
-                                                    <th>SL</th>
-                                                    <th>Customer ID</th>
-                                                    <th>Customer Name</th>
-                                                    <th>Customer E-mail</th>
-                                                    <th>Address</th>
-                                                    <th>Contract</th>
-                                                    <th>Action</th>
+                                                    
+                                                    <th scope="col">Customer ID</th>
+                                                    <th scope="col">Customer Name</th>
+                                                    <th scope="col">Customer E-mail</th>
+                                                    <th scope="col">Address</th>
+                                                    <th scope="col">Contract</th>
+                                                    <th scope="col">Gender</th>
+                                                    <th scope="col">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                
+                                                @foreach($customer as $data)
                                                
                                                 <tr>
-                                                    <th scope="row">4</th>
-                                                    <td>Blue Backpack For Baby</td>
-                                                    <td><span class="badge badge-danger">Extended</span></td>
-                                                    <td>January 25</td>
-                                                    <td class="color-danger">$14.85</td>
-                                                    <td>January 25</td>
-                                                    <td class="color-danger">$14.85</td>
+                                                    
+                                                    <td scope="col">{{$data->id}}</td>
+                                                    <td scope="col">{{$data->customer_name}}</td>
+                                                    <td scope="col">{{$data->customer_email}}</td>
+                                                    <td scope="col">{{$data->customer_address}}</td>
+                                                    <td scope="col">{{$data->contract}}</td>
+                                                    <td scope="col">{{$data->gander}}</td>
+                                                    
                                                     
 
                                                     
                                                 </tr>
                                                
-                                                <tr>
-                                                    <th scope="row">4</th>
-                                                    <td>Blue Backpack For Baby</td>
-                                                    <td><span class="badge badge-danger">Extended</span></td>
-                                                    <td>January 25</td>
-                                                    <td class="color-danger">$14.85</td>
-                                                    <td class="color-danger">$14.85</td>
-                                                    <td class="color-danger">$14.85</td>
-                                                    
-                                                </tr>
-                                               
-                                                <tr>
-                                                    <th scope="row">4</th>
-                                                    <td>Blue Backpack For Baby</td>
-                                                    <td><span class="badge badge-danger">Extended</span></td>
-                                                    <td>January 25</td>
-                                                    <td class="color-danger">$14.85</td>
-                                                    <td class="color-danger">$14.85</td>
-                                                    <td class="color-danger">$14.85</td>
-                                                    
-                                                </tr>
+                                               @endforeach
                                               
                                             </tbody>
                                         </table>

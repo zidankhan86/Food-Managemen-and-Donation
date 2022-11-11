@@ -13,7 +13,7 @@
   </div>
   <div class="form-group">
     <lebel for="contract">Contract</lebel>
-    <input type="number" class="form-control input-rounded" name="contract" placeholder="Enter contranct ">
+    <input type="tel" class="form-control input-rounded" name="contract" placeholder="Enter contranct ">
   </div>
 
   <div class="form-group">

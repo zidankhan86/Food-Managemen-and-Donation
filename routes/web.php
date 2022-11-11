@@ -33,7 +33,7 @@ Route::get('/product/form',[ProductController::class,'product_form'])->name('pro
 Route::post('/product/store',[ProductController::class,'product_store'])->name('product.store');
 
 Route::get('/customer',[CustomerController::class,'Customer'])->name("customer.list");
-Route::get('/customer/form',[CustomerController::class,'customer_form']);
+Route::get('/customer/form',[CustomerController::class,'customer_form'])->name("customer.form");
 Route::post("/customer/store", [CustomerController::class,"store"])->name("customer.store");
 
 Route::get('/branch',[BranchController::class,'Branch']); 

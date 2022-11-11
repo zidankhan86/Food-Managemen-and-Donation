@@ -12,60 +12,36 @@
                                     <div class="table-responsive">
                                         <table class="table table-hover ">
                                             <thead>
+
                                                 <tr>
-                                                    <th>SL</th>
-                                                    <th>Product ID</th>
-                                                    <th>Product Name</th>
-                                                    <th>Product Type</th>
-                                                    <th>Product Category</th>
-                                                    <th> Color</th>
-                                                    <th> Price</th>
-                                                    <th> Description</th>
-                                                    <th> Stock</th>
-                                                    <th>Action</th>
+                                                    
+                                                    <th scope="col">Product ID</th>
+                                                    <th scope="col">Product Name</th>
+                                                    <th scope="col">Product Type</th>
+                                                    <th scope="col">Product Category</th>
+                                                    <th scope="col"> Color</th>
+                                                    <th scope="col"> Price</th>
+                                                    <th scope="col"> Description</th>
+                                                    <th scope="col"> Stock</th>
+                                                    <th scope="col">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 
                                                
                                                 <tr>
-                                                    <th scope="row">4</th>
-                                                    <td>Blue Backpack For Baby</td>
-                                                    <td><span class="badge badge-danger">Extended</span></td>
-                                                    <td>January 25</td>
-                                                    <td class="color-danger">$14.85</td>
-                                                    <td>Add/Delete</td>
-                                                    <td>Add/Delete</td>
-                                                    <td>Add/Delete</td>
-                                                    <td>Add/Delete</td>
+                                                    
+                                                    <td scope="col"> </td>
+                                                    <td scope="col"> </td>
+                                                    <td scope="col"> </td>
+                                                    <td scope="col"> </td>
+                                                    <td scope="col"> </td>
+                                                    <td scope="col"> </td>
+                                                    <td scope="col"> </td>
+                                                    <td scope="col"> </td>
                                                     
                                                 </tr>
-                                               
-                                                <tr>
-                                                    <th scope="row">4</th>
-                                                    <td>Blue Backpack For Baby</td>
-                                                    <td><span class="badge badge-danger">Extended</span></td>
-                                                    <td>January 25</td>
-                                                    <td class="color-danger">$14.85</td>
-                                                    <td>Add/Delete</td>
-                                                    <td>Add/Delete</td>
-                                                    <td>Add/Delete</td>
-                                                    <td>Add/Delete</td>
-                                                    <td>Add/Delete</td>
-                                                </tr>
-                                               
-                                                <tr>
-                                                    <th scope="row">4</th>
-                                                    <td>Blue Backpack For Baby</td>
-                                                    <td><span class="badge badge-danger">Extended</span></td>
-                                                    <td>January 25</td>
-                                                    <td class="color-danger">$14.85</td>
-                                                    <td>Add/Delete</td>
-                                                    <td>Add/Delete</td>
-                                                    <td>Add/Delete</td>
-                                                    <td>Add/Delete</td>
-                                                    <td>Add/Delete</td>
-                                                </tr>
+                                              
                                               
                                             </tbody>
                                         </table>

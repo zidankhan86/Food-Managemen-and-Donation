@@ -8,7 +8,9 @@ use Illuminate\Http\Request;
 class CustomerController extends Controller
 {
     public function customer(){
-        return view('backend.pages.customer.customer');
+        $customer=Customer::all();
+        return view('backend.pages.customer.customer',compact('customer'));
+        
     }
     public function customer_form(){
         // return view('backend.pages.customer.customer_form');
