@@ -28,20 +28,20 @@
                                             </thead>
                                             <tbody>
                                                 
-                                               
+                                               @foreach($product_list as $data)
                                                 <tr>
+                                                <td scope="col"> {{$data->id}}</td>
+                                                    <td scope="col">{{$data->name}} </td>
+                                                    <td scope="col">{{$data->category}} </td>
+                                                    <td scope="col"> {{$data->price}}</td>
+                                                    <td scope="col">{{$data->stock}} </td>
+                                                    <td scope="col"> {{$data->image}}</td>
+                                                    <td scope="col"> {{$data->color}}</td>
                                                     
-                                                    <td scope="col"> </td>
-                                                    <td scope="col"> </td>
-                                                    <td scope="col"> </td>
-                                                    <td scope="col"> </td>
-                                                    <td scope="col"> </td>
-                                                    <td scope="col"> </td>
-                                                    <td scope="col"> </td>
-                                                    <td scope="col"> </td>
+                                                    
                                                     
                                                 </tr>
-                                              
+                                              @endforeach
                                               
                                             </tbody>
                                         </table>

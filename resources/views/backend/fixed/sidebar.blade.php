@@ -25,22 +25,15 @@
 
                     <li><a href="{{url('/donate')}}"><i class="ti-layout-grid4-alt"></i> Donate </a>   
                     </li>
-                    <li><a href="{{url('/help')}}"><i class="ti-heart"></i> Help Now </a>
+                   
+                    <li><a href="{{url('/help')}}"><i class="ti-heart"></i> Stock</a>
                         <ul>
                             <li><a href="font-themify.html">Themify</a></li>
                         </ul>
                     
-                    <li class="label">Form</li>
-                    <li><a href="form-basic.html"><i class="ti-view-list-alt"></i> Basic Form </a></li>
-                    <li class="label">Extra</li>
-                    <li><a class="sidebar-sub-toggle"><i class="ti-files"></i> Invoice <span
-                                class="sidebar-collapse-icon ti-angle-down"></span></a>
-                        <ul>
-                            <li><a href="invoice.html">Basic</a></li>
-                            <li><a href="invoice-editable.html">Editable</a></li>
-                        </ul>
+                    
                     </li>
-                    <li><a class="sidebar-sub-toggle"><i class="ti-target"></i> Pages <span
+                    <li><i class="ti-target"></i> Pages <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
                             <li><a href="page-login.html">Login</a></li>
@@ -48,7 +41,7 @@
                             <li><a href="page-reset-password.html">Forgot password</a></li>
                         </ul>
                     </li>
-                    <li><a href="../documentation/index.html"><i class="ti-file"></i> Documentation</a></li>
+                    
                     <li><a><i class="ti-close"></i> Logout</a></li>
                 </ul>
             </div>

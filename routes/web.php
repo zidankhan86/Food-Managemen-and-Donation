@@ -12,6 +12,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrganizationController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RestaurantController;
+use App\Models\Organization;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,7 +40,8 @@ Route::post("/customer/store", [CustomerController::class,"store"])->name("custo
 Route::get('/branch',[BranchController::class,'Branch']); 
 
 Route::get('/organization',[OrganizationController::class,'Organization']);
-Route::get('/organization/form',[OrganizationController::class,'Organization_form']);
+Route::get('/organization/form',[OrganizationController::class,'Organization_form'])->name('Organization.form');
+Route::post('/organization/store',[OrganizationController::class,'store'])->name('organization.store');
 
 Route::get('/category',[CategoryCotroller::class,'Category']);
 Route::get('/category/form',[CategoryCotroller::class,'Category_form']);
@@ -54,3 +56,4 @@ Route::post('/restaurent/store',[RestaurantController::class,"store"])->name("re
 
 Route::get('/donate',[DonateController::class,'donate']);
 Route::get('/donate/form',[DonateController::class,'donate_form']);
+Route::post('/donate/store',[DonateController::class,'store'])->name('donate.store');

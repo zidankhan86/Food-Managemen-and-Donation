@@ -1,24 +1,25 @@
 @extends('backend.admin')
 @section('content')
-
-<form  href="{{url('/organization')}}">
+<h2> Organization Form</h2>
+<form  action="{{route('organization.store')}}" method="POST"> 
+  @csrf
   <div class="form-group">
-    <label for="product_form">Enter Org Name</label>
-    <input type="text" class="form-control" id="product_form" aria-describedby="emailHelp" placeholder="Enter org Name">
+    <label for="name">Enter Org Name</label>
+    <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Enter org Name">
   </div>
   
   <div class="form-group">
-    <lebel for="producttype">org ID</lebel>
-    <input type="text" class="form-control" id="producttype" placeholder="Enter org id ">
+    <lebel for="id">org ID</lebel>
+    <input type="text" class="form-control" name="id" placeholder="Enter org id ">
   </div>
   <div class="form-group">
-    <textarea for="producttype">Organization Details</textarea>
-    <input type="text" class="form-control" id="producttype" placeholder="Enter details ">
+    <textarea for="details">Organization Details</textarea>
+    <input type="text" class="form-control" name="details" placeholder="Enter details ">
   </div>
   
   <div class="form-group">
-    <lebel for="productdescription">org Image</lebel>
-    <input type="file" class="form-control" id="productdescription" placeholder="Enter image ">
+    <lebel for="img">org Image</lebel>
+    <input type="file" class="form-control" name="img" placeholder="Enter image ">
 
   </div>
   <div><button type="submit" class="btn btn-primary">Submit</button></div>
