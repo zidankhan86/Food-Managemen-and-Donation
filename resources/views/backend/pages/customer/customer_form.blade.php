@@ -1,8 +1,15 @@
 @extends('backend.admin')
 @section('content')
 <form action="{{route('customer.store')}}" method="post">
+  @if($errors->any())
+@foreach($errors->all() as $message)
+<p class="alert alert-danger">{{$message}}</p>
+@endforeach
+
+
+  @endif
+@csrf
   <h1>Customer Form</h1>
-  @csrf
   <div class="form-group">
     <label for="customer_name" style="color: black;">Enter Customer Name</label>
     <input type="text" class="form-control input-rounded" name="customer_name" aria-describedby="emailHelp" placeholder="Enter Customer Name">

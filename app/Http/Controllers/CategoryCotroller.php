@@ -16,8 +16,13 @@ class CategoryCotroller extends Controller
         return view('backend.pages.category.category_form');
     }
     public function store(Request $req){
+
         //dd($req->all());
- 
+        $req->validate([
+            'name'=>'required',
+            'c_type'=>'required'
+        ]);
+
         Category::create([
             "name" =>$req->name,
             "c_type" =>$req->c_type,

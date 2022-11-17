@@ -17,6 +17,20 @@ class CustomerController extends Controller
         return view('backend.pages.customer.customer_form');
     }
     public function store(Request $req){
+
+        $req->validate([
+
+            'customer_name'=>'required',
+            'customer_email'=>'required',
+            'contract'=>'required'
+        ],
+        
+        [
+
+            'customer_name'=>'Name not given'
+          
+
+        ]);
         
         Customer::create([
             "customer_name" => $req->customer_name,
@@ -27,5 +41,6 @@ class CustomerController extends Controller
         ]);
         // dd($req->all());
         return redirect()->route('customer.list');
+        
     }
 }
