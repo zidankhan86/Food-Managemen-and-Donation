@@ -5,9 +5,8 @@
 @foreach($errors->all() as $message)
 <p class="alert alert-danger">{{$message}}</p>
 @endforeach
-
-
   @endif
+  
 @csrf
   <h1>Customer Form</h1>
   <div class="form-group">

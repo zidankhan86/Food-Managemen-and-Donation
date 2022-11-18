@@ -21,7 +21,7 @@ class CustomerController extends Controller
         $req->validate([
 
             'customer_name'=>'required',
-            'customer_email'=>'required',
+            
             'contract'=>'required'
         ],
         
@@ -35,7 +35,7 @@ class CustomerController extends Controller
         Customer::create([
             "customer_name" => $req->customer_name,
             "customer_email" => $req->email,
-            "contract" => $req->email,
+            "contract" => $req->contract,
             "customer_address" =>$req->address,
             "gander" =>$req->gander 
         ]);

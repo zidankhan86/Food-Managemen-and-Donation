@@ -21,6 +21,13 @@ class RestaurantController extends Controller
 public function store( request $req){
    // dd($req->all);
 
+
+   $req->validate([
+'name'=>'required',
+'location'=>'required'
+
+   ]);
+
     Restaurent::create([
         "name"=>$req->name,
         "location"=>$req->location,

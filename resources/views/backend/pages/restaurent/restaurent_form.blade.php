@@ -2,22 +2,29 @@
 @section('content')
 <div class="container">
 <form action="{{route('restaurent.store')}}" method="post"> 
-  <h3 style="text-align: center;">Restaurent Form</h3>
-  @csrf
+   @csrf
+   @if($errors->any())
+@foreach($errors->all() as $message)
+
+@endforeach
+<p class="alert alert-danger">{{$message}}</p>
+  @endif
+
+  <h3 style="text-align: center;">Restaurant Form</h3>
   <div class="form-group">
-    <label for="name">Enter Restaurent Name</label>
+    <label for="name">Enter Restaurant Name</label>
     <input type="text" class="form-control input-rounded" name="name" aria-describedby="emailHelp" placeholder="Enter Restaurant Name">
   </div>
   
   <div class="form-group">
-    <label for="location">Enter Restaurent Location</label>
+    <label for="location">Enter Restaurant Location</label>
     <input type="text" class="form-control input-rounded" name="location" placeholder="Enter Location">
   </div>
 
   
 <label for="img">image</label>
 <input type="file" id="img" class="form-control input-rounded" name="img">
-<label for="description">description</label>
+<label for="description">Description</label>
 <input type="text" id="description" class="form-control input-rounded" name="description">
 
 
