@@ -3,6 +3,7 @@
 <h2> Organization Form</h2>
 <form  action="{{route('organization.store')}}" method="POST"> 
   @csrf
+  
   <div class="form-group">
     <label for="name">Enter Org Name</label>
     <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Enter org Name">

@@ -6,13 +6,13 @@ use App\Http\Controllers\CategoryCotroller;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DonateController;
-use App\Http\Controllers\HelpController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrganizationController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RestaurantController;
-use App\Models\Organization;
+use App\Http\Controllers\StockController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -47,8 +47,8 @@ Route::get('/category',[CategoryCotroller::class,'Category']);
 Route::get('/category/form',[CategoryCotroller::class,'Category_form']);
 Route::post('/category/store',[CategoryCotroller::class,"store"]);
 
-Route::get('/help',[HelpController::class,'Help']);
-Route::get('/help/form',[HelpController::class,'help_form']);
+Route::get('/stock',[StockController::class,'Stock']);
+Route::get('/stock/form',[StockController::class,'Stock_form'])->name('stock.form');
 
 Route::get('/restaurent',[RestaurantController::class,'restaurant'])->name('restaurant.list');
 Route::get('/restaurent/form',[RestaurantController::class,'restaurant_form']);

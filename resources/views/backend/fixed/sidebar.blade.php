@@ -26,7 +26,7 @@
                     <li><a href="{{url('/donate')}}"><i class="ti-layout-grid4-alt"></i> Donate </a>   
                     </li>
                    
-                    <li><a href="{{url('/help')}}"><i class="ti-heart"></i> Stock</a>
+                    <li><a href="{{url('/stock')}}"><i class="ti-heart"></i> Stock</a>
                         <ul>
                             <li><a href="font-themify.html">Themify</a></li>
                         </ul>

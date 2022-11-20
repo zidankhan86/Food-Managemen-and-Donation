@@ -1,7 +1,7 @@
 @extends('backend.admin')
 @section('content')
 <h1 style="text-align: center;">Add a Product</h1>
-<form action="{{route('product.store')}}" method="post"> 
+<form action="{{route('product.store')}}" method="post" enctype="multipart/form-data"> 
 
 @csrf
 
