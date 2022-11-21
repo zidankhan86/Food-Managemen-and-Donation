@@ -49,11 +49,12 @@ Route::post('/category/store',[CategoryCotroller::class,"store"]);
 
 Route::get('/stock',[StockController::class,'Stock']);
 Route::get('/stock/form',[StockController::class,'Stock_form'])->name('stock.form');
+Route::post('/stock/store',[StockController::class,"store"])->name('stock.store');
 
 Route::get('/restaurent',[RestaurantController::class,'restaurant'])->name('restaurant.list');
 Route::get('/restaurent/form',[RestaurantController::class,'restaurant_form']);
 Route::post('/restaurent/store',[RestaurantController::class,"store"])->name("restaurent.store");
 
-Route::get('/donate',[DonateController::class,'donate']);
-Route::get('/donate/form',[DonateController::class,'donate_form']);
+Route::get('/donate',[DonateController::class,'donate'])->name('donate.list');
+Route::get('/donate/form',[DonateController::class,'donate_form'])->name('donate.form');
 Route::post('/donate/store',[DonateController::class,'store'])->name('donate.store');

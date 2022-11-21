@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class CustomerController extends Controller
 {
     public function customer(){
+        $customer=Customer::paginate(5);
         $customer=Customer::all();
         return view('backend.pages.customer.customer',compact('customer'));
         

@@ -1,9 +1,9 @@
 @extends('backend.admin')
 @section('content')
 
-<h5 style="text-align:center ;">Help Center</h5>
+<h5 style="text-align:center ;">Stock Form</h5>
 <div class="btn btn-primary" >
-<a href="{{url('')}}" style="color:white">Add Stock</a>
+<a href="{{route('stock.form')}}" style="color:white">Add Stock</a>
 </div>
 <table class="table table">
   <thead>
