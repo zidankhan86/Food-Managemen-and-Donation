@@ -4,6 +4,11 @@
 <form action="{{route('product.store')}}" method="post" enctype="multipart/form-data"> 
 
 @csrf
+@if($errors->any())
+@foreach($errors->all() as $message)
+@endforeach
+<p class="alert alert-danger">{{$message}}</p>
+@endif
 
   <div class="form-group">
     <label for="name">Enter Product Name</label>

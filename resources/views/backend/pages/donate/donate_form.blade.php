@@ -2,6 +2,11 @@
 @section('content')
 <form action="{{route('donate.store')}}" method="post">
   @csrf
+  @if($errors->any() )
+  @foreach($errors->all() as $message)
+  @endforeach
+  <p>{{$message}}</p>
+  @endif
  <h4 style="text-align: center">Donate Form</h4>
   <div class="form-group">
     <lebel for="name">Enter Donatior Name</lebel>

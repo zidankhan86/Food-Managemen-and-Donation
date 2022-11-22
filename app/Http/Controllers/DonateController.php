@@ -22,6 +22,13 @@ class DonateController extends Controller
     
     public function store(Request $req)
     {
+        
+        $req->validate([
+'name'=>'Required',
+'phone'=>'Required',
+'amount'=>'Required'
+
+        ]);
         // dd($req->all());
         Donate::create([
             'donatator_name' => $req->name,

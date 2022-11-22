@@ -17,7 +17,11 @@ class ProductController extends Controller
         }
 public function product_store(Request  $req){
     // dd($req->all());
-
+$req->validate([
+'name'=>'required',
+'price'=>'required',
+'stock'=>'required'
+]);
     $imageName=null;
     if($req->hasFile('image'))
     {

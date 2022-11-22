@@ -46,7 +46,7 @@
                                               
                                             </tbody>
                                         </table>
-    {{Customer->link()}}
+    
                                         
                                       
 @endsection
