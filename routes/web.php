@@ -1,12 +1,16 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BranchController;
 use App\Http\Controllers\CategoryCotroller;
+use App\Http\Controllers\ContractController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DonateController;
 use App\Http\Controllers\Frontend\WebController;
+use App\Http\Controllers\FrontendHomeController;
+use App\Http\Controllers\FrontendRestaurantController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrganizationController;
@@ -14,7 +18,8 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RestaurantController;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\LoginController;
-
+use App\Http\Controllers\MenuController;
+use Illuminate\Foundation\Console\AboutCommand;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +34,11 @@ use App\Http\Controllers\LoginController;
 //frontend
 
 Route::get('/',[WebController::class,'home'])->name('home');
+Route::get('/about',[AboutController::class,'about'])->name('about');
+Route::get('/contract',[ContractController::class,'contract_frontend'])->name('contract');
+Route::get('/menu',[MenuController::class,'menu']);
+Route::get('/restaurant_frontend',[FrontendRestaurantController::class,'restaurant_frontend'])->name('restaurant.frotend');
+
 
 
 

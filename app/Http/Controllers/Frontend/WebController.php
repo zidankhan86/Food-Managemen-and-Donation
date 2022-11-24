@@ -9,7 +9,7 @@ class WebController extends Controller
 {
     public function home()
     {
-        return view('frontend.master');
+        return view('frontend.pages.home');
     }
     
 }
