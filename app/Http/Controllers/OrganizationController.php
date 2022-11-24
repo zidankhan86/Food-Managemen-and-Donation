@@ -10,7 +10,7 @@ class OrganizationController extends Controller
     public function organization()
     {
 
-        $org=Organization::all();
+        $org=Organization::paginate(5);
         return view(('backend.pages.organization.organization'),compact('org'));
     }
     public function organization_form()
@@ -32,5 +32,6 @@ class OrganizationController extends Controller
            
 
         ]);
+        return redirect()->back();
     }
 }

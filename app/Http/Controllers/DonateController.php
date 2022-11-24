@@ -10,7 +10,7 @@ class DonateController extends Controller
     public function donate()
     {
 
-        $donate = Donate::all();
+        $donate = Donate::paginate(5);
 
         return view('backend.pages.donate.donate', compact('donate'));
     }

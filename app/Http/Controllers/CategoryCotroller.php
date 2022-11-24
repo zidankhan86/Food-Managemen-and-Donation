@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class CategoryCotroller extends Controller
 {
     public function Category(){
-        $category=Category::all();
+        $category=Category::paginate(5);
 
         return view('backend.pages.category.category',compact('category'));
     }

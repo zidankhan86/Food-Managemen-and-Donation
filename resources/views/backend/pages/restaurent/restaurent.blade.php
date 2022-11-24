@@ -5,6 +5,7 @@
 <a href="{{url('/restaurent/form')}}" style="color:white">Add Restaurant</a>
 </div>
 
+
                         <!-- /# column -->
                         <div class="col-lg-11">
                             <div class="card">

@@ -42,5 +42,6 @@
                                               
                                             </tbody>
                                         </table>
+                                        {{$org->links()}}
 
 @endsection

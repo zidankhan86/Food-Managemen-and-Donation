@@ -9,8 +9,9 @@ class StockController extends Controller
 {
     public function stock(){
 
+
         $stock_list=Stock::all();
-        return view('backend.pages.stock.stock');
+        return view('backend.pages.stock.stock',compact('stock'));
     }
     public function stock_form()
     {  

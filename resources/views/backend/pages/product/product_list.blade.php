@@ -54,7 +54,7 @@
                                         </table>
 
 
-
+                                        {{$product_list->links()}}
 
 
 @endsection

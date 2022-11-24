@@ -8,20 +8,22 @@
 <table class="table table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">ID</th>
+      <th scope="col">Stock Type</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Action</th>
+    
     </tr>
   </thead>
   <tbody>
+@foreach($stock as $data)
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="col">{{$data->}}</th>
+      <td scope="col">{{$data->}}</td>
+      <td scope="col">{{$data->}}</td>
+      <td scope="col">@{{$data->}}</td>
     </tr>
-    
+    @endforeach
   </tbody>
 </table>
 
