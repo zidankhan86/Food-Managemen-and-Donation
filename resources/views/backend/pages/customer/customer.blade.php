@@ -46,7 +46,11 @@
                                               
                                             </tbody>
                                         </table>
+<<<<<<< HEAD
     {{$customer->links()}}
+=======
+    
+>>>>>>> 512123c59ad7db72a3f54565dab3904b1128b520
                                         
                                       
 @endsection

@@ -16,7 +16,7 @@
                                                 <tr>
                                                     <th scope="col">ID</th>
                                                     <th scope="col">Organization Name</th>
-                                                    <th scope="col">Address</th>
+                                                    <th scope="col">Contract</th>
                                                     <th scope="col">Action</th>
                                                 </tr>
                                                 

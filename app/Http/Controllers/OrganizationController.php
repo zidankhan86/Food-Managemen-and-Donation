@@ -20,6 +20,11 @@ class OrganizationController extends Controller
     }
     public function store(Request $req)
     {
+        $req->validate([
+          'name' =>'Required',
+          'details'=>'Required'
+
+        ]);
 
         
         Organization::create([
