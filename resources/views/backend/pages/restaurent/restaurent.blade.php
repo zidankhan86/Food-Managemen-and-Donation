@@ -2,7 +2,7 @@
 @section('content')
 <h5 style="text-align:center ;">Restaurent List</h5>
 <div class="btn btn-primary" >
-<a href="{{url('/restaurent/form')}}" style="color:white">Add Restaurant</a>
+<a href="{{route('restaurant_form')}}" style="color:white">Add Restaurant</a>
 </div>
 
 

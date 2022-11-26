@@ -3,7 +3,7 @@
 
 <h5 style="text-align:center ;">Donaton List</h5>
 <div class="btn btn-primary">
-    <a href="{{url('/donate/form')}}" style="color:white">Add Donate</a>
+    <a href="{{route('donate.form')}}" style="color:white">Add Donate</a>
 
 
 

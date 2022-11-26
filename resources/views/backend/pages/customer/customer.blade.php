@@ -3,7 +3,7 @@
 
 <h5 style="text-align:center ;">Customer List</h5>
 <div class="btn btn-success" >
-<a href="{{url('/customer/form')}}" style="color:white">Add Customer</a>
+<a href="{{route('customer.form')}}" style="color:white">Add Customer</a>
 </div>
 
 <!-- /# column -->
@@ -46,11 +46,7 @@
                                               
                                             </tbody>
                                         </table>
-<<<<<<< HEAD
     {{$customer->links()}}
-=======
-    
->>>>>>> 512123c59ad7db72a3f54565dab3904b1128b520
                                         
                                       
 @endsection

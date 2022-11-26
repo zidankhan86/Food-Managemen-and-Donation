@@ -5,25 +5,25 @@
                     <div class="logo"><a href="index.html">
                             <!-- <img src="images/logo.png" alt="" /> --><span style="color:#fff;">FOOD FOR ALL</span></a></div>
                     <li class="label">Main</li>
-                    <li><a href="{{url('/dashboard')}}" ><i class="ti-home"></i> HOME </a>
+                    <li><a href="{{route('dashboard')}}" ><i class="ti-home"></i> HOME </a>
                         
                     </li>
 
                     <li class="label">Apps</li>
-                    <li><a href="{{url('/category')}}" ><i class="ti-bar-chart-alt"></i> Category </a>
+                    <li><a href="{{route('Category')}}" ><i class="ti-bar-chart-alt"></i> Category </a>
                     </li>
-                    <li><a href="{{url('/restaurent')}}"><i class="ti-calendar"></i> Restaurant </a></li>
+                    <li><a href="{{route('restaurant.list')}}"><i class="ti-calendar"></i> Restaurant </a></li>
                     
-                    <li><a href="{{url('/customer')}}"><i class="ti-layout"></i> Customers </a>
+                    <li><a href="{{route('customer')}}"><i class="ti-layout"></i> Customers </a>
 
                     </li>
                     <li><a href="{{route('product.list')}}"><i class="ti-map"></i> Product </a>
                     </li>
                         
                     </li>
-                    <li><a href="{{url('/organization')}}"><i class="ti-calendar"></i> Organization </a></li>
+                    <li><a href="{{route('organization')}}"><i class="ti-calendar"></i> Organization </a></li>
 
-                    <li><a href="{{url('/donate')}}"><i class="ti-layout-grid4-alt"></i> Donate </a>   
+                    <li><a href="{{route('donate.list')}}"><i class="ti-layout-grid4-alt"></i> Donate </a>   
                     </li>
                    
                     <li><a href="{{url('/stock')}}"><i class="ti-heart"></i> Stock</a>

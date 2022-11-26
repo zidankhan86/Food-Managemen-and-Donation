@@ -3,7 +3,7 @@
 @section('content')
 <h5 style="text-align:center ;">Category List</h5>
 <div class="btn btn-primary" >
-<a href="{{url('/category/form')}}" style="color:white">Add Category</a>
+<a href="{{route('Category_form')}}" style="color:white">Add Category</a>
 </div>
 
     

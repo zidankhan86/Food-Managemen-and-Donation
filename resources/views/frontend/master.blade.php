@@ -18,11 +18,13 @@ http://www.templatemo.com/tm-515-eatery
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
      <link rel="stylesheet" href="{{url('/frontend/css/bootstrap.min.css')}}">
-     <link rel="stylesheet" href="{{url('/frontend/css/font-awesome.min.css')}}">
+     <!-- <link rel="stylesheet" href="{{url('/frontend/css/font-awesome.min.css')}}"> -->
      <link rel="stylesheet" href="{{url('/frontend/css/animate.css')}}">
      <link rel="stylesheet" href="{{url('/frontend/css/owl.carousel.css')}}">
      <link rel="stylesheet" href="{{url('/frontend/css/owl.theme.default.min.css')}}">
      <link rel="stylesheet" href="{{url('/frontend/css/magnific-popup.css')}}">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="{{url('/frontend/css/templatemo-style.css')}}">

@@ -1,6 +1,6 @@
 @extends('backend.admin')
 @section('content')
-<form action="{{url('/category/store')}}" method="POST">
+<form action="{{route('store')}}" method="POST">
   @if($errors->any())
     @foreach($errors->all() as $message)
       <p class="alert alert-danger">{{$message}}</p>

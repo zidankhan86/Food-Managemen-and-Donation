@@ -41,7 +41,7 @@ class CustomerController extends Controller
             "gander" =>$req->gander 
         ]);
         // dd($req->all());
-        return redirect()->route('customer.list');
+        return redirect()->back();
         
     }
 }

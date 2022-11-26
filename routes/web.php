@@ -8,6 +8,7 @@ use App\Http\Controllers\ContractController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DonateController;
+use App\Http\Controllers\Frontend\AuthController;
 use App\Http\Controllers\Frontend\WebController;
 use App\Http\Controllers\FrontendHomeController;
 use App\Http\Controllers\FrontendRestaurantController;
@@ -20,6 +21,7 @@ use App\Http\Controllers\StockController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MenuController;
 use Illuminate\Foundation\Console\AboutCommand;
+use PhpParser\Node\Stmt\Return_;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +40,8 @@ Route::get('/about',[AboutController::class,'about'])->name('about');
 Route::get('/contract',[ContractController::class,'contract_frontend'])->name('contract');
 Route::get('/menu',[MenuController::class,'menu']);
 Route::get('/restaurant_frontend',[FrontendRestaurantController::class,'restaurant_frontend'])->name('restaurant.frotend');
+Route::post('/signin',[AuthController::class,'signin'])->name('signin');
+Route::post('/login',[AuthController::class,'login'])->name('login');
 
 
 
@@ -46,10 +50,11 @@ Route::get('/restaurant_frontend',[FrontendRestaurantController::class,'restaura
 
 
 //backend
+
 Route::group(['prefix'=>'admin'], function()
 {
-    Route::get('/',[HomeController::class,'admin']);
-    Route::get('/dashboard',[DashboardController::class,'Dashboard']);
+    Route::get('/',[HomeController::class,'admin'])->name('admin');
+    Route::get('/dashboard',[DashboardController::class,'Dashboard'])->name('dashboard');
     
     Route::get('/admin-login',[LoginController::class,'showLogin'])->name('admin.login');
     Route::post('/admin-login',[LoginController::class,'processLogin']);
@@ -62,26 +67,26 @@ Route::group(['prefix'=>'admin'], function()
     Route::get('/product/form',[ProductController::class,'product_form'])->name('product.form');
     Route::post('/product/store',[ProductController::class,'product_store'])->name('product.store');
     
-    Route::get('/customer',[CustomerController::class,'Customer'])->name("customer.list");
-    Route::get('/customer/form',[CustomerController::class,'customer_form'])->name("customer.form");
-    Route::post("/customer/store", [CustomerController::class,"store"])->name("customer.store");
-    
+    Route::get('/customer',[CustomerController::class,'Customer'])->name('customer');
+    Route::get('/customer/form',[CustomerController::class,'customer_form'])->name('customer.form');
+    Route::post('/customer/store', [CustomerController::class,'store'])->name('customer.store');
+
     Route::get('/branch',[BranchController::class,'Branch']); 
     
-    Route::get('/organization',[OrganizationController::class,'Organization']);
+    Route::get('/organization',[OrganizationController::class,'Organization'])->name('organization');
     Route::get('/organization/form',[OrganizationController::class,'Organization_form'])->name('Organization.form');
     Route::post('/organization/store',[OrganizationController::class,'store'])->name('organization.store');
     
-    Route::get('/category',[CategoryCotroller::class,'Category']);
-    Route::get('/category/form',[CategoryCotroller::class,'Category_form']);
-    Route::post('/category/store',[CategoryCotroller::class,"store"]);
+    Route::get('/category',[CategoryCotroller::class,'Category'])->name('Category');
+    Route::get('/category/form',[CategoryCotroller::class,'Category_form'])->name('Category_form');
+    Route::post('/category/store',[CategoryCotroller::class,"store"])->name('store');
     
     Route::get('/stock',[StockController::class,'Stock']);
     Route::get('/stock/form',[StockController::class,'Stock_form'])->name('stock.form');
     Route::post('/stock/store',[StockController::class,"store"])->name('stock.store');
     
     Route::get('/restaurent',[RestaurantController::class,'restaurant'])->name('restaurant.list');
-    Route::get('/restaurent/form',[RestaurantController::class,'restaurant_form']);
+    Route::get('/restaurent/form',[RestaurantController::class,'restaurant_form'])->name('restaurant_form');
     Route::post('/restaurent/store',[RestaurantController::class,"store"])->name("restaurent.store");
     
     Route::get('/donate',[DonateController::class,'donate'])->name('donate.list');

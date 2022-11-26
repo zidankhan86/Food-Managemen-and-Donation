@@ -7,27 +7,7 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-<<<<<<< HEAD
     public function product_list()
-=======
-    public function product_list(){
-        $product_list=Product::all();
-        return  view('backend.pages.product.product_list',compact(('product_list')));
-    
-    }
-        public function product_form(){
-            return  view('backend.pages.product.product_form');
-        }
-public function product_store(Request  $req){
-    // dd($req->all());
-$req->validate([
-'name'=>'required',
-'price'=>'required',
-'stock'=>'required'
-]);
-    $imageName=null;
-    if($req->hasFile('image'))
->>>>>>> 512123c59ad7db72a3f54565dab3904b1128b520
     {
         $product_list = Product::paginate(5);
         return  view('backend.pages.product.product_list', compact(('product_list')));
