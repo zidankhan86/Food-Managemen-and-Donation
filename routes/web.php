@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BranchController;
 use App\Http\Controllers\CategoryCotroller;
 use App\Http\Controllers\ContractController;
@@ -10,7 +9,6 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DonateController;
 use App\Http\Controllers\Frontend\AuthController;
 use App\Http\Controllers\Frontend\WebController;
-use App\Http\Controllers\FrontendHomeController;
 use App\Http\Controllers\FrontendRestaurantController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -40,8 +38,8 @@ Route::get('/about',[AboutController::class,'about'])->name('about');
 Route::get('/contract',[ContractController::class,'contract_frontend'])->name('contract');
 Route::get('/menu',[MenuController::class,'menu']);
 Route::get('/restaurant_frontend',[FrontendRestaurantController::class,'restaurant_frontend'])->name('restaurant.frotend');
-Route::post('/signin',[AuthController::class,'signin'])->name('signin');
-Route::post('/login',[AuthController::class,'login'])->name('login');
+Route::post('/user/signin',[AuthController::class,'signin'])->name('signin');
+Route::post('/user/login',[AuthController::class,'login'])->name('login');
 
 
 
@@ -51,17 +49,16 @@ Route::post('/login',[AuthController::class,'login'])->name('login');
 
 //backend
 
-Route::group(['prefix'=>'admin'], function()
+Route::get('/login',[LoginController::class,'showLogin'])->name('show.login');
+Route::post('/login/process', [LoginController::class, 'login_process'])->name('login.process'); 
+
+Route::group(['middleware'=>'auth','adminchecker','prefix'=>'admin'], function()
 {
+
+    Route::get('/logout', [LoginController::class, 'Logout'])->name('admin.logout');
+
     Route::get('/',[HomeController::class,'admin'])->name('admin');
     Route::get('/dashboard',[DashboardController::class,'Dashboard'])->name('dashboard');
-    
-    Route::get('/admin-login',[LoginController::class,'showLogin'])->name('admin.login');
-    Route::post('/admin-login',[LoginController::class,'processLogin']);
-    
-    
-    
-    
     
     Route::get('/product',[ProductController::class,'product_list'])->name('product.list');
     Route::get('/product/form',[ProductController::class,'product_form'])->name('product.form');

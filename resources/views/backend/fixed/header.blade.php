@@ -151,9 +151,10 @@
                         </div>
                         <div class="dropdown dib">
                             <div class="header-icon" data-toggle="dropdown">
-                                <span class="user-avatar">John
+                                <a href="{{route('login.process')}}"></a><span class="user-avatar">John
                                     <i class="ti-angle-down f-s-10"></i>
                                 </span>
+                                </a>
                                 <div class="drop-down dropdown-profile dropdown-menu dropdown-menu-right">
                                     <div class="dropdown-content-heading">
                                         <span class="text-left">Upgrade Now</span>
@@ -187,8 +188,8 @@
                                                     <span>Lock Screen</span>
                                                 </a>
                                             </li>
-                                            <li>
-                                                <a href="#">
+                                            <li onclick="window.location.href='{{route('admin.logout')}}'">
+                                                <a href="{{route('admin.logout')}}">
                                                     <i class="ti-power-off"></i>
                                                     <span>Logout</span>
                                                 </a>

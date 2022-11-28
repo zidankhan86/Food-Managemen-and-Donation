@@ -10,7 +10,7 @@
                     </button>
 
                     <!-- lOGO TEXT HERE -->
-                    <a href="index.html" class="navbar-brand">BeingHuman <span> <i class="fas fa-male"></i> </span> Restaurant</a>
+                    <a href="index.html" class="navbar-brand">BeingHuman <span> <i class="fas fa-male"></i> </span> <br>Restaurant</a>
                </div>
 
                <!-- MENU LINKS -->
@@ -24,9 +24,14 @@
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
+                         @auth
+                         <li><a href="#" data-toggle="modal" data-target="">Profile</a></li>
+                         <li><a href="#" data-toggle="modal" data-target="">Logout</a></li>
+                         <a href="#footer" class="section-btn">Donate</a>
+                         @else
                          <li><a href="#" data-toggle="modal" data-target="#login">Login</a></li>
                          <li><a href="#" data-toggle="modal" data-target="#signup">Sign Up</a></li>
-                         <a href="#footer" class="section-btn">Donate</a>
+                         @endauth
                     </ul>
                </div>
 

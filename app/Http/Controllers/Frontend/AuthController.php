@@ -19,7 +19,7 @@ class AuthController extends Controller
             'email'=>$req->email,
             'address'=>$req->address,
             'phone'=>$req->phone,
-            'password'=>$req->password,
+            'password'=>bcrypt($req->password),
             'role'=>'organization'
 
             ]);
