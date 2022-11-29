@@ -4,13 +4,11 @@
 
                <div class="navbar-header">
                     <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
+                        
                     </button>
 
                     <!-- lOGO TEXT HERE -->
-                    <a href="index.html" class="navbar-brand">BeingHuman <span> <i class="fas fa-male"></i> </span> <br>Restaurant</a>
+                    <a href="index.html" class="navbar-brand" style="color: black;">BeingHuman<span></span><br>Restaurant<i class='fas fa-hand-holding-heart'></i></a>
                </div>
 
                <!-- MENU LINKS -->
@@ -27,7 +25,7 @@
                          @auth
                          <li><a href="#" data-toggle="modal" data-target="">Profile</a></li>
                          <li><a href="#" data-toggle="modal" data-target="">Logout</a></li>
-                         <a href="#footer" class="section-btn">Donate</a>
+                         <a href="#footer" class="section-btn"><b>Donate <br>Now</a>
                          @else
                          <li><a href="#" data-toggle="modal" data-target="#login">Login</a></li>
                          <li><a href="#" data-toggle="modal" data-target="#signup">Sign Up</a></li>

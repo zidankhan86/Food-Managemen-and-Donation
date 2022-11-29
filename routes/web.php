@@ -47,10 +47,13 @@ Route::post('/user/login',[AuthController::class,'login'])->name('login');
 
 
 
+
 //backend
+
 
 Route::get('/login',[LoginController::class,'showLogin'])->name('show.login');
 Route::post('/login/process', [LoginController::class, 'login_process'])->name('login.process'); 
+
 
 Route::group(['middleware'=>'auth','adminchecker','prefix'=>'admin'], function()
 {

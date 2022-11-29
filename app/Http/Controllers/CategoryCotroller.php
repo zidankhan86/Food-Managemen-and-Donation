@@ -29,6 +29,7 @@ class CategoryCotroller extends Controller
             "status" =>$req->status,
             
          ]);  
+         notify()->success('category created successfully', 'success');
         return redirect()->back();
 
 

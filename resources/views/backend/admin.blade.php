@@ -31,6 +31,8 @@
     <link href="{{url('css/lib/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{url('css/lib/helper.css')}}" rel="stylesheet">
     <link href="{{url('/css/style.css')}}" rel="stylesheet">
+    @notifyCss
+
 </head>
 
 <body>
@@ -46,6 +48,7 @@
 
 
     <div class="content-wrap">
+         <x:notify-messages />
         
         @yield('content')
         
@@ -80,6 +83,8 @@
     <script src="{{url('js/lib/owl-carousel/owl.carousel-init.js')}}"></script>
     <!-- scripit init-->
     <script src="{{url('js/dashboard2.js')}}"></script>
+    @notifyJs
+
 </body>
 
 </html>

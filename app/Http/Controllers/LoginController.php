@@ -16,7 +16,9 @@ class LoginController extends Controller
     {
        
        $crediantials=$request->except('_token');
+
        if(Auth::attempt($crediantials))
+       
        {
           return redirect()->route('admin');
 
