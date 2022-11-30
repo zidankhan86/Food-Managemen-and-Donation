@@ -17,7 +17,8 @@ http://www.templatemo.com/tm-515-eatery
      <meta name="author" content="">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-     <link rel="stylesheet" href="{{url('/frontend/css/bootstrap.min.css')}}">
+      <link rel="stylesheet" href="{{url('/frontend/css/bootstrap.min.css')}}">
+
      <!-- <link rel="stylesheet" href="{{url('/frontend/css/font-awesome.min.css')}}"> -->
      <link rel="stylesheet" href="{{url('/frontend/css/animate.css')}}">
      <link rel="stylesheet" href="{{url('/frontend/css/owl.carousel.css')}}">
@@ -61,7 +62,8 @@ http://www.templatemo.com/tm-515-eatery
 
      <!-- SCRIPTS -->
      <script src="{{url('/frontend/js/jquery.js')}}"></script>
-     <script src="{{url('/frontend/js/bootstrap.min.js')}}"></script>
+      <script src="{{url('/frontend/js/bootstrap.min.js')}}"></script> 
+
      <script src="{{url('/frontend/js/jquery.stellar.min.js')}}"></script>
      <script src="{{url('/frontend/js/wow.min.js')}}"></script>
      <script src="{{url('/frontend/js/owl.carousel.min.js')}}"></script>

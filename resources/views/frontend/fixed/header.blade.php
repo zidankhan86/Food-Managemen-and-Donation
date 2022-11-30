@@ -1,37 +1,53 @@
 <!-- MENU -->
 <section class="navbar custom-navbar navbar-fixed-top" role="navigation" style="background-color:brown; ">
-          <div class="container">
+     <div class="container">
 
-               <div class="navbar-header">
-                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        
-                    </button>
+          <div class="navbar-header">
+               <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 
-                    <!-- lOGO TEXT HERE -->
-                    <a href="index.html" class="navbar-brand" style="color: black;">BeingHuman<span></span><br>Restaurant<i class='fas fa-hand-holding-heart'></i></a>
-               </div>
+               </button>
 
-               <!-- MENU LINKS -->
-               <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-nav-first">
-                         <li><a href="#home" class="smoothScroll">Home</a></li>
-                         <li><a href="#about" class="smoothScroll">About</a></li>
-                         <li><a href="#team" class="smoothScroll">Restaurant</a></li>
-                         <li><a href="#menu" class="smoothScroll">Category</a></li>
-                         <li><a href="#contact" class="smoothScroll">Contact</a></li>
-                    </ul>
+               <!-- lOGO TEXT HERE -->
+               <a href="index.html" class="navbar-brand" style="color: black;">BeingHuman<span></span><br>Restaurant<i class='fas fa-hand-holding-heart'></i></a>
+          </div>
 
-                    <ul class="nav navbar-nav navbar-right">
-                         @auth
-                         <li><a href="#" data-toggle="modal" data-target="">Profile</a></li>
-                         <li><a href="#" data-toggle="modal" data-target="">Logout</a></li>
-                         <a href="#footer" class="section-btn"><b>Donate <br>Now</a>
-                         @else
-                         <li><a href="#" data-toggle="modal" data-target="#login">Login</a></li>
-                         <li><a href="#" data-toggle="modal" data-target="#signup">Sign Up</a></li>
-                         @endauth
-                    </ul>
-               </div>
+          <!-- MENU LINKS -->
+          <div class="collapse navbar-collapse">
+               <ul class="nav navbar-nav navbar-nav-first">
+                    <li><a href="#home" class="smoothScroll" style="color:white ;">Home</a></li>
+                    <li><a href="#about" class="smoothScroll" style="color: white;">About</a></li>
+                    <li><a href="#menu" class="smoothScroll" style="color: white;">Category</a></li>
+                    <li><a href="#team" class="smoothScroll" style="color: white;">Restaurant</a></li>
+                    <li><a href="#contact" class="smoothScroll" style="color:white ;">Contact</a></li>
+                    <li><a href="#contact" class="smoothScroll" style="color:white ;">Dishes</a></li>
+               </ul>
+
+               <ul class="nav navbar-nav navbar-right">
+                    @auth
+                  
+                    <div class="dropdown">
+                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                         {{auth()->user()->name}} 
+                         </button>
+                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                              <li><a href="#"  class="text-primary" style="color:black ;">Profile</a></li>
+                              <li><a href="#"  class="text-primary" style="color:black ;">Another action</a></li>
+                              <li><a href="#"  class="text-primary" style="color: black;">Something else here</a></li>
+                              <li><a href="{{route('Logout_frontend')}}" class="text-primary" style="color: black;">Logout</a></li>
+                         </ul>
+                         <a href="" class="btn btn-success"><b>Donate <br>Now</a>
+                    </div>
+                    @else
+                    <li><a href="#" data-toggle="modal" data-target="#login">Login</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#signup">Sign Up</a></li>
+                    @endauth
+
+
+
+               </ul>
 
           </div>
-     </section>
+
+     </div>
+
+</section>

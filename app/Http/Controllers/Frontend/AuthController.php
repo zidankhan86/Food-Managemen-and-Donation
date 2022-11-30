@@ -45,6 +45,10 @@ public function login(Request $req){
 
 
 }
+public function Logout_frontend(){
+        Auth::logout();
+        return redirect()->route('home');
 
+}
 
 }

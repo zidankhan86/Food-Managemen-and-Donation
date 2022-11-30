@@ -45,7 +45,11 @@ Route::post('/user/login',[AuthController::class,'login'])->name('login');
 
 
 
+Route::group(['middleware'=>'auth'], function(){
 
+    Route::get('/logout_frontend',[AuthController::class,'Logout_frontend'])->name('Logout_frontend');
+
+});
 
 
 //backend
