@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -37,6 +38,28 @@ class ProductController extends Controller
         ]);
         return redirect()->back();
     }
+    public function edit($product_id){
 
-    
+            $product_data=Product::find($product_id);
+
+            return view('backend.pages.product.edit',compact('product_data'));
+        }
+    public function update(Request $request, $product_id){
+
+            $product_update=Product::find($product_id);
+            $product_update->update([
+
+            'name' => $request->name,
+            'category' => $request->category,
+            'price' => $request->price,
+            'stock' => $request->stock,
+            'color' => $request->color
+
+            ]);
+
+            notify()->success('Product update done!');
+            return redirect()->route('product.list');
+
+        }
+
 }

@@ -7,14 +7,14 @@
  <!-- /# column -->
  <div class="col-lg-11">
                             <div class="card">
-                                
+
                                 <div class="card-body">
                                     <div class="table-responsive">
                                         <table class="table table-hover ">
                                             <thead>
 
                                                 <tr>
-                                                    
+
                                                     <th scope="col">ID</th>
                                                     <th scope="col">Product Name</th>
                                                     <th scope="col">Category</th>
@@ -26,7 +26,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                
+
                                                @foreach($product_list as $data)
                                                 <tr>
                                                 <td scope="col"> {{$data->id}}</td>
@@ -39,17 +39,17 @@
                                                         <img width="50px" src="{{url('/uploads/'.$data->image)}}" alt="Product Image">
                                                     </td>
                                                     <td scope="col">
-                                                        <a class="btn btn-info" href="">View</a>
-                                                        <a class="btn btn-success" href="">Update</a>
+                                                       <!-- <a class="btn btn-info" href="">View</a>-->
+                                                        <a class="btn btn-success" href="{{route('product.edit',$data->id)}}">Edit</a>
                                                         <a class="btn btn-danger" href="">Delete</a>
 
                                                     </td>
-                                                    
-                                                    
-                                                    
+
+
+
                                                 </tr>
                                               @endforeach
-                                              
+
                                             </tbody>
                                         </table>
 

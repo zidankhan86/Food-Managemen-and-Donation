@@ -14,8 +14,8 @@
           <!-- MENU LINKS -->
           <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-nav-first">
-                    <li><a href="#home" class="smoothScroll" style="color:white ;">Home</a></li>
-                    <li><a href="#about" class="smoothScroll" style="color: white;">About</a></li>
+                    <li><a href="{{route('home')}}" class="smoothScroll" style="color:white ;">Home</a></li>
+                    <li><a href="{{route('about')}}" class="smoothScroll" style="color: white;">About</a></li>
                     <li><a href="#menu" class="smoothScroll" style="color: white;">Category</a></li>
                     <li><a href="#team" class="smoothScroll" style="color: white;">Restaurant</a></li>
                     <li><a href="#contact" class="smoothScroll" style="color:white ;">Contact</a></li>
@@ -24,10 +24,10 @@
 
                <ul class="nav navbar-nav navbar-right">
                     @auth
-                  
+
                     <div class="dropdown">
                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                         {{auth()->user()->name}} 
+                         {{auth()->user()->name}}
                          </button>
                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                               <li><a href="#"  class="text-primary" style="color:black ;">Profile</a></li>
