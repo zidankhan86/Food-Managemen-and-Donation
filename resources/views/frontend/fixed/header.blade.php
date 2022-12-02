@@ -8,7 +8,7 @@
                </button>
 
                <!-- lOGO TEXT HERE -->
-               <a href="index.html" class="navbar-brand" style="color: black;">BeingHuman<span></span><br>Restaurant<i class='fas fa-hand-holding-heart'></i></a>
+               <a href="index.html" class="navbar-brand" style="color: black;">HumanCare<span></span><br>Restaurant<i style="color: rgb(248, 11, 11)" class='fas fa-hand-holding-heart'></i></a>
           </div>
 
           <!-- MENU LINKS -->
@@ -18,7 +18,7 @@
                     <li><a href="{{route('about')}}" class="smoothScroll" style="color: white;">About</a></li>
                     <li><a href="#menu" class="smoothScroll" style="color: white;">Category</a></li>
                     <li><a href="#team" class="smoothScroll" style="color: white;">Restaurant</a></li>
-                    <li><a href="#contact" class="smoothScroll" style="color:white ;">Contact</a></li>
+                    <li><a href="{{route('contract')}}" class="smoothScroll" style="color:white ;">Contact</a></li>
                     <li><a href="#contact" class="smoothScroll" style="color:white ;">Dishes</a></li>
                </ul>
 
@@ -40,6 +40,7 @@
                     @else
                     <li><a href="#" data-toggle="modal" data-target="#login">Login</a></li>
                     <li><a href="#" data-toggle="modal" data-target="#signup">Sign Up</a></li>
+                    <li><a href="{{route('doante.about')}}" class="btn btn-danger"><b>Donate Now</a></li>
                     @endauth
 
 

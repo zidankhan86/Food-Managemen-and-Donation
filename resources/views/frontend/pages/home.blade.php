@@ -8,9 +8,9 @@
                 <div class="caption">
                      <div class="container">
                           <div class="col-md-8 col-sm-12">
-                               <h3>Eatery Cafe &amp; Restaurant</h3>
-                               <h1>Our mission is to provide an unforgettable experience</h1>
-                               
+                               <h3>Donate And &amp; Enjoy </h3>
+                               <h1>Our mission is to provide free food for all </h1>
+
                           </div>
                      </div>
                 </div>
@@ -20,9 +20,9 @@
                 <div class="caption">
                      <div class="container">
                           <div class="col-md-8 col-sm-12">
-                               <h3>Your Perfect Breakfast</h3>
-                               <h1>The best dinning quality can be here too!</h1>
-                               <a href="#menu" class="section-btn btn btn-default smoothScroll">Discover menu</a>
+                               <h3>This is Your Own Restaurant</h3>
+                               <h1>Donate Your Unused Food .A New Day Start With A New Hope .Enjoy Your Day With Your Restaurant </h1>
+                               <a href="#menu" class="section-btn btn btn-default smoothScroll">Discover Your Humanity</a>
                           </div>
                      </div>
                 </div>
@@ -32,9 +32,9 @@
                 <div class="caption">
                      <div class="container">
                           <div class="col-md-8 col-sm-12">
-                               <h3>New Restaurant in Town</h3>
-                               <h1>Enjoy our special menus every Sunday and Friday</h1>
-                               <a href="#contact" class="section-btn btn btn-default smoothScroll">Reservation</a>
+                               <h3>We will make your day better</h3>
+                               <h1>Enjoy Your Meal with us</h1>
+
                           </div>
                      </div>
                 </div>
@@ -281,12 +281,12 @@
                                <label>Email address</label>
                                <input type="email" class="form-control" name="email" placeholder="Email">
                           </div>
-                         
+
                           <div class="form-group">
                                <label>Password</label>
                                <input type="password" class="form-control" name="password" placeholder="Password">
                           </div>
-                          
+
                           <div class="modal-footer">
                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                <button type="submit" class="btn btn-primary">Login</button>
@@ -332,7 +332,7 @@
                                <label>Password</label>
                                <input type="password" class="form-control" name="password" placeholder="Password">
                           </div>
-                          
+
                           <div class="modal-footer">
                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                <button type="submit" class="btn btn-primary">Submit</button>

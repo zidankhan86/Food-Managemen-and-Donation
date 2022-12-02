@@ -9,7 +9,11 @@
                                    <h2 class="wow fadeInUp" data-wow-delay="0.2s">Find us</h2>
                               </div>
                               <address class="wow fadeInUp" data-wow-delay="0.4s">
-                                   <p>123 nulla a cursus rhoncus,<br> augue sem viverra 10870<br>id ultricies sapien</p>
+                                   <p>4 Embankment Drive Road,Sector-10<br> Uttara Model Town, Dhaka-1230.<br>
+
+                                 Phone: (88 02) 55091801-5,<br> Mobile : +880 1714014933, +880 1833386644(Hunting)
+
+                                   Fax: (880-2) 5895 2625, <br>Email : info@iubat.edu</p>
                               </address>
                          </div>
                     </div>
@@ -17,12 +21,12 @@
                     <div class="col-md-3 col-sm-8">
                          <div class="footer-info">
                               <div class="section-title">
-                                   <h2 class="wow fadeInUp" data-wow-delay="0.2s">Reservation</h2>
+                                   <h2 class="wow fadeInUp" data-wow-delay="0.2s">Contract For More</h2>
                               </div>
                               <address class="wow fadeInUp" data-wow-delay="0.4s">
-                                   <p>090-080-0650 | 090-070-0430</p>
-                                   <p><a href="mailto:info@company.com">info@company.com</a></p>
-                                   <p>LINE: eatery247 </p>
+                                   <p>01776718178 </p>
+                                   <p><a href="mailto:info@company.com">info@FazleRabbiZidan.com</a></p>
+                                   <p>Location: IUBAT </p>
                               </address>
                          </div>
                     </div>
@@ -30,19 +34,9 @@
                     <div class="col-md-4 col-sm-8">
                          <div class="footer-info footer-open-hour">
                               <div class="section-title">
-                                   <h2 class="wow fadeInUp" data-wow-delay="0.2s">Open Hours</h2>
+                                   <h2 class="wow fadeInUp" data-wow-delay="0.2s">Open 24/7</h2>
                               </div>
-                              <div class="wow fadeInUp" data-wow-delay="0.4s">
-                                   <p>Monday: Closed</p>
-                                   <div>
-                                        <strong>Tuesday to Friday</strong>
-                                        <p>7:00 AM - 9:00 PM</p>
-                                   </div>
-                                   <div>
-                                        <strong>Saturday - Sunday</strong>
-                                        <p>11:00 AM - 10:00 PM</p>
-                                   </div>
-                              </div>
+
                          </div>
                     </div>
 
@@ -54,14 +48,14 @@
                               <li><a href="#" class="fa fa-google"></a></li>
                          </ul>
 
-                         <div class="wow fadeInUp copyright-text" data-wow-delay="0.8s"> 
-                              <p><br>Copyright &copy; 2018 <br>Your Company Name 
-                              
-                              <br><br>Design: <a rel="nofollow" href="http://templatemo.com" target="_parent">TemplateMo</a> 
-                              <br><br>Distribution: <a href="http://themewagon.com" target="_parent">ThemeWagon</a></p>
+                         <div class="wow fadeInUp copyright-text" data-wow-delay="0.8s">
+                              <p><br>Copyright &copy; 2022(IUBAT PRACTICUM) <br>Food Management and Donation System
+
+                              <br>
+                              <br>
                          </div>
                     </div>
-                    
+
                </div>
           </div>
      </footer>

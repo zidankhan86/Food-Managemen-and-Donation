@@ -6,7 +6,9 @@ use App\Http\Controllers\CategoryCotroller;
 use App\Http\Controllers\ContractController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DonateAboutController;
 use App\Http\Controllers\DonateController;
+use App\Http\Controllers\DonateHelpController;
 use App\Http\Controllers\Frontend\AuthController;
 use App\Http\Controllers\Frontend\WebController;
 use App\Http\Controllers\FrontendRestaurantController;
@@ -35,6 +37,7 @@ use PhpParser\Node\Stmt\Return_;
 
 Route::get('/',[WebController::class,'home'])->name('home');
 Route::get('/about',[AboutController::class,'about'])->name('about');
+Route::get('/donate/about',[DonateAboutController::class,'donate_about'])->name('doante.about');
 Route::get('/contract',[ContractController::class,'contract_frontend'])->name('contract');
 Route::get('/menu',[MenuController::class,'menu']);
 Route::get('/restaurant_frontend',[FrontendRestaurantController::class,'restaurant_frontend'])->name('restaurant.frotend');
