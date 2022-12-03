@@ -8,9 +8,9 @@
                 <div class="caption">
                      <div class="container">
                           <div class="col-md-8 col-sm-12">
-                               <h3>Donate And &amp; Enjoy </h3>
+                               <h3>Donate  &amp; Enjoy </h3>
                                <h1>Our mission is to provide free food for all </h1>
-
+                               <a href="{{route('doante.about')}}" class="section-btn btn btn-default smoothScroll">Donate </a>
                           </div>
                      </div>
                 </div>
@@ -21,8 +21,8 @@
                      <div class="container">
                           <div class="col-md-8 col-sm-12">
                                <h3>This is Your Own Restaurant</h3>
-                               <h1>Donate Your Unused Food .A New Day Start With A New Hope .Enjoy Your Day With Your Restaurant </h1>
-                               <a href="#menu" class="section-btn btn btn-default smoothScroll">Discover Your Humanity</a>
+                               <h1>Donate Your Unsold Food .A New Day Start With A New Hope . </h1>
+                               <a href="{{route('doante.about')}}" class="section-btn btn btn-default smoothScroll">Donate Now</a>
                           </div>
                      </div>
                 </div>
@@ -220,9 +220,11 @@
             4. Copy only URL and paste it within the src="" field below
 	-->
                 <div class="wow fadeInUp col-md-6 col-sm-12" data-wow-delay="0.4s">
-                     <div id="google-map">
-                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.3030413476204!2d100.5641230193719!3d13.757206847615207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf51ce6427b7918fc!2sG+Tower!5e0!3m2!1sen!2sth!4v1510722015945" allowfullscreen></iframe>
-                     </div>
+                <div class="wow fadeInUp about-image" data-wow-delay="0.6s">
+                    
+                        <img src="{{url('/frontend/images/p2.jpg')}}" class="img-responsive" alt="">
+                        <p style="color:black;">Make People Happy </p>
+                   </div>
                 </div>
 
                 <div class="col-md-6 col-sm-12">
