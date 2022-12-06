@@ -6,32 +6,28 @@
                             <!-- <img src="images/logo.png" alt="" /> --><span style="color:#fff;">FOOD FOR ALL</span></a></div>
                     <li class="label">Main</li>
                     <li><a href="{{route('dashboard')}}" ><i class="ti-home"></i> HOME </a>
-                        
+
                     </li>
 
                     <li class="label">Apps</li>
-                    <li><a href="{{route('Category')}}" ><i class="ti-bar-chart-alt"></i> Category </a>
+                    <li><a href="{{route('Category')}}" > Category </a>
                     </li>
-                    <li><a href="{{route('restaurant.list')}}"><i class="ti-calendar"></i> Restaurant </a></li>
-                    
-                    <li><a href="{{route('customer')}}"><i class="ti-layout"></i> Customers </a>
+                    <li><a href="{{route('restaurant.list')}}">  Restaurant </a></li>
+
+                    <li><a href="{{route('customer')}}"> Customers </a>
 
                     </li>
-                    <li><a href="{{route('product.list')}}"><i class="ti-map"></i> Product </a>
+                    <li><a href="{{route('product.list')}}"> Product </a>
                     </li>
-                        
-                    </li>
-                    <li><a href="{{route('organization')}}"><i class="ti-calendar"></i> Organization </a></li>
 
-                    <li><a href="{{route('donate.list')}}"><i class="ti-layout-grid4-alt"></i> Donate </a>   
                     </li>
-                   
-                    <li><a href="{{url('/stock')}}"><i class="ti-heart"></i> Stock</a>
-                        <ul>
-                            <li><a href="font-themify.html">Themify</a></li>
-                        </ul>
-                    
-                    
+                    <li><a href="{{route('organization')}}"> Organization </a></li>
+
+                    <li><a href="{{route('donate.list')}}"> Donate </a>
+                    </li>
+
+                    <li><a href="{{url('/stock')}}"> Stock</a>
+   
                     </li>
                     <li><i class="ti-target"></i> Pages <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
@@ -41,7 +37,7 @@
                             <li><a href="page-reset-password.html">Forgot password</a></li>
                         </ul>
                     </li>
-                    
+
                     <li><a><i class="ti-close"></i> Logout</a></li>
                 </ul>
             </div>

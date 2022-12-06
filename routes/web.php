@@ -8,7 +8,6 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DonateAboutController;
 use App\Http\Controllers\DonateController;
-use App\Http\Controllers\DonateHelpController;
 use App\Http\Controllers\Frontend\AuthController;
 use App\Http\Controllers\Frontend\WebController;
 use App\Http\Controllers\FrontendRestaurantController;
@@ -20,8 +19,7 @@ use App\Http\Controllers\RestaurantController;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MenuController;
-use Illuminate\Foundation\Console\AboutCommand;
-use PhpParser\Node\Stmt\Return_;
+use App\Http\Controllers\RoleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,16 +37,15 @@ Route::get('/',[WebController::class,'home'])->name('home');
 Route::get('/about',[AboutController::class,'about'])->name('about');
 Route::get('/donate/about',[DonateAboutController::class,'donate_about'])->name('doante.about');
 Route::get('/contract',[ContractController::class,'contract_frontend'])->name('contract');
-Route::get('/menu',[MenuController::class,'menu']);
 Route::get('/restaurant_frontend',[FrontendRestaurantController::class,'restaurant_frontend'])->name('restaurant.frotend');
 Route::post('/user/signin',[AuthController::class,'signin'])->name('signin');
 Route::post('/user/login',[AuthController::class,'login'])->name('login');
+Route::get('/menu/dishes',[MenuController::class,'menu'])->name('menu.dishes');
 
 
 
 
-
-Route::group(['middleware'=>'auth'], function(){
+    Route::group(['middleware'=>'auth'], function(){
 
     Route::get('/logout_frontend',[AuthController::class,'Logout_frontend'])->name('Logout_frontend');
 
@@ -60,6 +57,8 @@ Route::group(['middleware'=>'auth'], function(){
 
 Route::get('/login',[LoginController::class,'showLogin'])->name('show.login');
 Route::post('/login/process', [LoginController::class, 'login_process'])->name('login.process');
+
+
 
 
 Route::group(['middleware'=>'auth','adminchecker','prefix'=>'admin'], function()
@@ -75,10 +74,14 @@ Route::group(['middleware'=>'auth','adminchecker','prefix'=>'admin'], function()
     Route::post('/product/store',[ProductController::class,'product_store'])->name('product.store');
     Route::get('/product/edit/{product_id}',[ProductController::class,'edit'])->name('product.edit');
     Route::put('/product/update/{product_id}',[ProductController::class,'update'])->name('product.update');
+    Route::get('/delete/product/{delete_id}',[ProductController::class,'delete_product'])->name('product.delete');
 
     Route::get('/customer',[CustomerController::class,'Customer'])->name('customer');
     Route::get('/customer/form',[CustomerController::class,'customer_form'])->name('customer.form');
     Route::post('/customer/store', [CustomerController::class,'store'])->name('customer.store');
+    Route::get('/edit/customer/{customer_id}',[CustomerController::class,'edit'])->name('customer.edit');
+    Route::put('/customer/update/{customer_id}',[CustomerController::class,'update'])->name('customer.update');
+    Route::get('/customer/delete/{delete_id}',[CustomerController::class,'delete'])->name('customer.delete');
 
     Route::get('/branch',[BranchController::class,'Branch']);
 
@@ -91,14 +94,16 @@ Route::group(['middleware'=>'auth','adminchecker','prefix'=>'admin'], function()
     Route::post('/category/store',[CategoryCotroller::class,'store'])->name('store');
     Route::get('/category/edit/{category_id}',[CategoryCotroller::class,'edit'])->name('category.edit');
     Route::put('/category/update/{category_id}',[CategoryCotroller::class,'update'])->name('category.update');
+    Route::get('/category/delete{delete_id}',[CategoryCotroller::class,'category_delete'])->name('category.delete');
 
     Route::get('/stock',[StockController::class,'Stock']);
     Route::get('/stock/form',[StockController::class,'Stock_form'])->name('stock.form');
     Route::post('/stock/store',[StockController::class,"store"])->name('stock.store');
 
-    Route::get('/restaurent',[RestaurantController::class,'restaurant'])->name('restaurant.list');
-    Route::get('/restaurent/form',[RestaurantController::class,'restaurant_form'])->name('restaurant_form');
-    Route::post('/restaurent/store',[RestaurantController::class,"store"])->name("restaurent.store");
+    Route::get('/restaurant',[RestaurantController::class,'restaurant'])->name('restaurant.list');
+    Route::get('/restaurant/form',[RestaurantController::class,'restaurant_form'])->name('restaurant_form');
+    Route::post('/restaurant/store',[RestaurantController::class,'store'])->name('restaurent.store');
+    Route::post('restaurant/donate',[RestaurantController::class,'restaurant_donate'])->name('restaurant.donate');
 
     Route::get('/donate',[DonateController::class,'donate'])->name('donate.list');
     Route::get('/donate/form',[DonateController::class,'donate_form'])->name('donate.form');

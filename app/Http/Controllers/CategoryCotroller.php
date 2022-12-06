@@ -54,4 +54,9 @@ return view('backend.pages.category.edit',compact('category_data'));
     return redirect()->route('Category');
 
     }
+    public function category_delete(){
+        
+
+
+    }
 }

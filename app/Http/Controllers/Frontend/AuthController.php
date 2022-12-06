@@ -11,7 +11,7 @@ class AuthController extends Controller
 {
     public function signin(Request $req){
 
-        
+
 
             User::create([
 
@@ -20,17 +20,17 @@ class AuthController extends Controller
             'address'=>$req->address,
             'phone'=>$req->phone,
             'password'=>bcrypt($req->password),
-            'role'=>'organization'
+            'role'=>$req->role
 
             ]);
 
            // dd($req->all());
 
-           
+
 
             return redirect()->back();
 
-        
+
     }
 
 public function login(Request $req){

@@ -19,7 +19,7 @@ class ProductController extends Controller
     }
     public function product_store(Request  $req)
     {
-        // dd($req->all());
+        //dd($req->all());
 
         $imageName = null;
         if ($req->hasFile('image')) {
@@ -32,8 +32,7 @@ class ProductController extends Controller
             'category' => $req->category,
             'price' => $req->price,
             'stock' => $req->stock,
-            'image' => $imageName,
-            'color' => $req->color
+            'image' => $imageName
 
         ]);
         return redirect()->back();
@@ -53,7 +52,6 @@ class ProductController extends Controller
             'category' => $request->category,
             'price' => $request->price,
             'stock' => $request->stock,
-            'color' => $request->color
 
             ]);
 
@@ -61,5 +59,9 @@ class ProductController extends Controller
             return redirect()->route('product.list');
 
         }
-
+public function delete_product($delete_id){
+$delete=Product::find($delete_id);
+        $delete->delete();
+        return redirect()->route('home');
+    }
 }

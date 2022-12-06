@@ -8,7 +8,7 @@
                </button>
 
                <!-- lOGO TEXT HERE -->
-               <a href="index.html" class="navbar-brand" style="color: black;">HumanCare<span></span><br>Restaurant<i style="color: rgb(248, 11, 11)" class='fas fa-hand-holding-heart'></i></a>
+               <a href="" class="navbar-brand" style="color: black;">HumanCare<span></span><br>Restaurant<i style="color: rgb(248, 11, 11)" class='fas fa-hand-holding-heart'></i></a>
           </div>
 
           <!-- MENU LINKS -->
@@ -16,14 +16,16 @@
                <ul class="nav navbar-nav navbar-nav-first">
                     <li><a href="{{route('home')}}" class="smoothScroll" style="color:white ;">Home</a></li>
                     <li><a href="{{route('about')}}" class="smoothScroll" style="color: white;">About</a></li>
-                    <li><a href="#menu" class="smoothScroll" style="color: white;">Category</a></li>
-                    <li><a href="#team" class="smoothScroll" style="color: white;">Restaurant</a></li>
+                    <li><a href="" class="smoothScroll" style="color: white;">Category</a></li>
+                    <li><a href="" class="smoothScroll" style="color: white;">Restaurant</a></li>
                     <li><a href="{{route('contract')}}" class="smoothScroll" style="color:white ;">Contact</a></li>
-                    <li><a href="#contact" class="smoothScroll" style="color:white ;">Dishes</a></li>
+                    <li><a href="{{route('menu.dishes')}}" class="smoothScroll" style="color:white ;">Dishes</a></li>
                </ul>
 
                <ul class="nav navbar-nav navbar-right">
                     @auth
+
+
 
                     <div class="dropdown">
                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">

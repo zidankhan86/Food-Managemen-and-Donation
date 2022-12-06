@@ -18,7 +18,6 @@
                                                     <th scope="col">ID</th>
                                                     <th scope="col">Product Name</th>
                                                     <th scope="col">Category</th>
-                                                    <th scope="col">Color</th>
                                                     <th scope="col"> Price</th>
                                                     <th scope="col"> Stock</th>
                                                     <th scope="col"> Image</th>
@@ -32,7 +31,6 @@
                                                 <td scope="col"> {{$data->id}}</td>
                                                     <td scope="col">{{$data->name}} </td>
                                                     <td scope="col">{{$data->category}} </td>
-                                                    <td scope="col">{{$data->color}} </td>
                                                     <td scope="col"> {{$data->price}}</td>
                                                     <td scope="col">{{$data->stock}} </td>
                                                     <td scope="col">
@@ -41,7 +39,7 @@
                                                     <td scope="col">
                                                        <!-- <a class="btn btn-info" href="">View</a>-->
                                                         <a class="btn btn-success" href="{{route('product.edit',$data->id)}}">Edit</a>
-                                                        <a class="btn btn-danger" href="">Delete</a>
+                                                        <a class="btn btn-danger" href="{{route('product.delete',$data->id)}}">Delete</a>
 
                                                     </td>
 

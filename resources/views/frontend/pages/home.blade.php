@@ -221,7 +221,7 @@
 	-->
                 <div class="wow fadeInUp col-md-6 col-sm-12" data-wow-delay="0.4s">
                 <div class="wow fadeInUp about-image" data-wow-delay="0.6s">
-                    
+
                         <img src="{{url('/frontend/images/p2.jpg')}}" class="img-responsive" alt="">
                         <p style="color:black;">Make People Happy </p>
                    </div>
@@ -333,6 +333,13 @@
                           <div class="form-group">
                                <label>Password</label>
                                <input type="password" class="form-control" name="password" placeholder="Password">
+                          </div>
+                          <div>
+                            <label for="">Sign up as</label>
+                            <select name="role">
+                                <option value="restaurant">Restaurant</option>
+                                <option value="organization">Organization</option>
+                            </select>
                           </div>
 
                           <div class="modal-footer">

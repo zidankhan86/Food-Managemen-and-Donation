@@ -1,6 +1,6 @@
 @extends('backend.admin')
 @section('content')
-<h1 style="text-align: center;">Add a Product</h1>
+
 <form action="{{route('product.update',$product_data->id)}}" method="post" enctype="multipart/form-data">
 
 @csrf
@@ -36,18 +36,6 @@
     <label for="image">Product Image</label>
     <input type="file" class="form-control input-rounded" name="image" placeholder="img">
   </div>
-
-  <div>
-  <label for="meal">Product Color:</label>
-  <select name="color" name="color">
-    <option value="White">White</option>
-    <option value="Red">Red</option>
-    <option value="Blue">Blue</option>
-    <option value="Black">Black</option>
-  </select>
-
-  </div >
-
   <button type="submit" class="btn btn-success">Update</button>
 </form>
 
