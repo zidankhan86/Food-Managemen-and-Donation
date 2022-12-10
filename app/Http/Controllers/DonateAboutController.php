@@ -9,6 +9,10 @@ class DonateAboutController extends Controller
     public function donate_about(){
 
 
-      return view('frontend.pages.donateabout.donateabout');
+      return view('frontend.pages.restaurant');
+    }
+    public function visitor_donate(){
+return view('frontend.pages.donateabout.donateabout');
+
     }
 }

@@ -16,12 +16,12 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth()->user()->role=='admin')
+        if(auth()->user()->role=='admin' && auth()->user()->role=='restaurant')
         {
             return $next($request);
         }
 
         return redirect()->back();
-        
+
     }
 }

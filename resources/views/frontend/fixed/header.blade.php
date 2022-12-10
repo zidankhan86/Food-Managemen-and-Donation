@@ -17,8 +17,10 @@
                     <li><a href="{{route('home')}}" class="smoothScroll" style="color:white ;">Home</a></li>
                     <li><a href="{{route('about')}}" class="smoothScroll" style="color: white;">About</a></li>
                     <li><a href="" class="smoothScroll" style="color: white;">Category</a></li>
-                    <li><a href="" class="smoothScroll" style="color: white;">Restaurant</a></li>
                     <li><a href="{{route('contract')}}" class="smoothScroll" style="color:white ;">Contact</a></li>
+                    @auth
+                    <li><a href="{{route('doante.about')}}" class="smoothScroll" style="color: white;">Restaurant</a></li>
+                    @endauth
                     <li><a href="{{route('menu.dishes')}}" class="smoothScroll" style="color:white ;">Dishes</a></li>
                </ul>
 
@@ -28,6 +30,7 @@
 
 
                     <div class="dropdown">
+
                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                          {{auth()->user()->name}}
                          </button>
@@ -37,12 +40,13 @@
                               <li><a href="#"  class="text-primary" style="color: black;">Something else here</a></li>
                               <li><a href="{{route('Logout_frontend')}}" class="text-primary" style="color: black;">Logout</a></li>
                          </ul>
+
                          <a href="" class="btn btn-success"><b>Donate <br>Now</a>
                     </div>
                     @else
                     <li><a href="#" data-toggle="modal" data-target="#login">Login</a></li>
                     <li><a href="#" data-toggle="modal" data-target="#signup">Sign Up</a></li>
-                    <li><a href="{{route('doante.about')}}" class="btn btn-danger"><b>Donate Now</a></li>
+                    <li><a href="{{route('visitor.donate')}}" class="btn btn-danger"><b>Donate Now</a></li>
                     @endauth
 
 

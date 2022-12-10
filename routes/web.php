@@ -8,6 +8,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DonateAboutController;
 use App\Http\Controllers\DonateController;
+use App\Http\Controllers\FoodController;
 use App\Http\Controllers\Frontend\AuthController;
 use App\Http\Controllers\Frontend\WebController;
 use App\Http\Controllers\FrontendRestaurantController;
@@ -35,12 +36,14 @@ use App\Http\Controllers\RoleController;
 
 Route::get('/',[WebController::class,'home'])->name('home');
 Route::get('/about',[AboutController::class,'about'])->name('about');
-Route::get('/donate/about',[DonateAboutController::class,'donate_about'])->name('doante.about');
+Route::get('/about/donate',[DonateAboutController::class,'donate_about'])->name('doante.about');
 Route::get('/contract',[ContractController::class,'contract_frontend'])->name('contract');
 Route::get('/restaurant_frontend',[FrontendRestaurantController::class,'restaurant_frontend'])->name('restaurant.frotend');
+Route::get('/visitor/donate',[DonateAboutController::class,'visitor_donate'])->name('visitor.donate');
 Route::post('/user/signin',[AuthController::class,'signin'])->name('signin');
 Route::post('/user/login',[AuthController::class,'login'])->name('login');
 Route::get('/menu/dishes',[MenuController::class,'menu'])->name('menu.dishes');
+Route::post('/restaurant/donate',[RestaurantController::class,'donateForm'])->name('restaurant.donateForm');
 
 
 
@@ -109,6 +112,9 @@ Route::group(['middleware'=>'auth','adminchecker','prefix'=>'admin'], function()
     Route::get('/donate/form',[DonateController::class,'donate_form'])->name('donate.form');
     Route::post('/donate/store',[DonateController::class,'store'])->name('donate.store');
 
+    Route::get('/food',[FoodController::class,'list'])->name('food.list');
+    Route::get('/food/create',[FoodController::class,'food_create'])->name('food.create');
+    Route::post('/food/store',[FoodController::class,'food_store'])->name('food.store');
 
 
 });

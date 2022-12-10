@@ -19,10 +19,10 @@ class DonateController extends Controller
         return view('backend.pages.donate.donate_form');
     }
 
-    
+
     public function store(Request $req)
     {
-        
+
         $req->validate([
 'name'=>'Required',
 'phone'=>'Required',

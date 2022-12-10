@@ -7,7 +7,7 @@
 <p class="alert alert-danger">{{$message}}</p>
 @endforeach
   @endif
-  
+
 
   <h1>Customer Form</h1>
   <div class="form-group">

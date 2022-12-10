@@ -31,8 +31,8 @@
                    </div>
 
                    <!-- CONTACT FORM -->
-                   <form action="{{route('restaurant.donate')}}" method="post" class="wow fadeInUp" id="contact-form" role="form" data-wow-delay="0.8s">
-
+                   <form action="{{route('restaurant.donateForm')}}" method="POST" enctype="multipart/form-data" class="wow fadeInUp" id="contact-form" role="form" data-wow-delay="0.8s">
+                   @csrf
                         <!-- IF MAIL SENT SUCCESSFUL  // connect this with custom JS -->
                         <h6 class="text-success">Your message has been sent successfully.</h6>
 
@@ -40,38 +40,39 @@
                         <h6 class="text-danger">E-mail must be valid and message must be longer than 1 character.</h6>
 
                         <div class="col-md-6 col-sm-6">
-
-                             <input type="text" class="form-control" id="cf-name" name="name" placeholder="Restaurant Name">
+                            <label for="">Name</label>
+                            <input type="text" class="form-control" id="cf-name" name="name" placeholder="Restaurant Name">
                         </div>
                         <div class="col-md-6 col-sm-6">
-
-                             <input type="text" class="form-control" id="cf-name" name="category" placeholder="Category Name">
+                            <label for="">Category</label>
+                            <input type="text" class="form-control" id="cf-name" name="category" placeholder="Category Name">
                         </div>
                         <div class="col-md-6 col-sm-6">
-
-                             <input type="text" class="form-control" id="cf-name" name="dish_item" placeholder="Dish Name">
+                            <label for="">Dish Name</label>
+                            <input type="text" class="form-control" id="cf-name" name="dish_item" placeholder="Dish Name">
                         </div>
-                                                <div class="col-md-6 col-sm-6">
-
+                        <div class="col-md-6 col-sm-6">
+                        <label for="">Price</label>
                         <input type="number" class="form-control" id="cf-name" name="price" placeholder="Enter Price">
                         </div>
-                        <div class="col-md-6 col-sm-6">
-                             <input type="email" class="form-control" id="cf-email" name="location" placeholder="Restaurant Location">
-                        </div>
 
                         <div class="col-md-6 col-sm-6">
+                        <label for="">Image</label>
                             <input type="file" class="form-control" id="cf-email" name="image" placeholder="Upload Food Image">
                        </div>
 
                        <div class="col-md-6 col-sm-6">
-                        <input type="text" class="form-control" id="cf-email" name="description" placeholder="Enter Food Description">
-                   </div>
-                   <div class="col-md-6 col-sm-6">
-                    <input type="number" class="form-control" id="cf-email" name="contract" placeholder="Enter Restaurant Contract">
-               </div>
-               <div class="col-md-6 col-sm-6">
-                    <input type="text" class="form-control" id="cf-email" name="quantity" placeholder="Enter  quantity">
-               </div>
+                            <label for="">Description</label>
+                            <input type="text" class="form-control" id="cf-email" name="description" placeholder="Enter Food Description">
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <label for="">Contract</label>
+                            <input type="number" class="form-control" id="cf-email" name="contract" placeholder="Enter Restaurant Contract">
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <label for="">Quantity</label>
+                            <input type="text" class="form-control" id="cf-email" name="quantity" placeholder="Enter  quantity">
+                        </div>
 
                         <div class="col-md-12 col-sm-12">
 

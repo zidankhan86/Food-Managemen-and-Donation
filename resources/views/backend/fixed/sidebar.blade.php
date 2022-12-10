@@ -10,33 +10,23 @@
                     </li>
 
                     <li class="label">Apps</li>
-                    <li><a href="{{route('Category')}}" > Category </a>
+                    <li><a href="{{route('Category')}}" ><i class="ti-list"></i> Category </a>
                     </li>
-                    <li><a href="{{route('restaurant.list')}}">  Restaurant </a></li>
+                    <li><a href="{{route('restaurant.list')}}"><i></i>   Restaurant </a></li>
 
-                    <li><a href="{{route('customer')}}"> Customers </a>
-
-                    </li>
-                    <li><a href="{{route('product.list')}}"> Product </a>
-                    </li>
+                    <li><a href="{{route('customer')}}"><i class="bi bi-person"></i>  Customers </a>
 
                     </li>
-                    <li><a href="{{route('organization')}}"> Organization </a></li>
-
-                    <li><a href="{{route('donate.list')}}"> Donate </a>
+                    <li><a href="{{route('product.list')}}"><i></i>  Product </a>
                     </li>
 
-                    <li><a href="{{url('/stock')}}"> Stock</a>
-   
                     </li>
-                    <li><i class="ti-target"></i> Pages <span
-                                class="sidebar-collapse-icon ti-angle-down"></span></a>
-                        <ul>
-                            <li><a href="page-login.html">Login</a></li>
-                            <li><a href="page-register.html">Register</a></li>
-                            <li><a href="page-reset-password.html">Forgot password</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="{{route('organization')}}"><i></i>  Organization </a></li>
+
+                    <li><a href="{{route('donate.list')}}"> <i></i> Donate </a></li>
+
+                    <li><a href="{{url('/stock')}}"> <i></i> Stock</a></li>
+                    <li><a href="{{route('food.list')}}"><i></i> Food</a></li>
 
                     <li><a><i class="ti-close"></i> Logout</a></li>
                 </ul>
