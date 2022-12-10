@@ -13,27 +13,20 @@
                          </div>
                     </div>
 
-                    @foreach($dishes as $data)
-                    <div class="col-md-4 col-sm-6">
-                         <!-- MENU THUMB -->
-                         <div class="menu-thumb">
-                            <!--  <a href="{{url('/frontend/images/menu-image1.jpg')}}" class="image-popup" title="American Breakfast"> -->
-                                   <img src="{{url('/uploads/'.$data->image)}}" class="img-responsive" alt="">
-
-                                   <div class="menu-info">
-                                        <div class="menu-item">
-                                             <h3>Category: {{$data->category}}</h3>
-                                             <p>Food Name: {{$data->name}}</p>
-                                        </div>
-                                        <div class="menu-price">
-                                             <span>Price: {{$data->price}} BDT</span>
-                                             <span>Stock: {{$data->stock}}</span>
-                                        </div>
+                    <div class="row">
+                         @foreach($dishes as $data)
+                              <div class="col-md-3">
+                              <div class="card" style="width: 18rem;">
+                                   <img width="300px" src="{{url('/uploads/'.$data->image)}}" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                        <h5 class="card-title">Category: {{$data->category}} Stock: {{$data->stock}}</h5>
+                                        <p class="card-text">Food Name: {{$data->name}}. Price: {{$data->price}} BDT</p>
+                                   <a href="{{route('food.request',$data->id)}}" class="btn btn-primary">Food request</a>
                                    </div>
-                              </a>
-                         </div>
+                              </div>
+                              </div>
+                         @endforeach
                     </div>
-                    @endforeach
                </div>
           </div>
      </section>

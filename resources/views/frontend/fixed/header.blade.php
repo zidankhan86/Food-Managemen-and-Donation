@@ -21,7 +21,7 @@
                     @auth
                     <li><a href="{{route('doante.about')}}" class="smoothScroll" style="color: white;">Restaurant</a></li>
                     @endauth
-                    <li><a href="{{route('menu.dishes')}}" class="smoothScroll" style="color:white ;">Dishes</a></li>
+                    <li><a href="{{route('menu.dishes')}}" class="smoothScroll" style="color:white ;">Food</a></li>
                </ul>
 
                <ul class="nav navbar-nav navbar-right">

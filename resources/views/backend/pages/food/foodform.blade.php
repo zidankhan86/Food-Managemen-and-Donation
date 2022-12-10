@@ -4,7 +4,7 @@
 <h5 style="text-align:center">Food List</h5>
 <br>
 <br>
-<form action="{{route('food.store')}}" method="POST">
+<form action="{{route('food.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
 
 
@@ -28,6 +28,13 @@
 
              <div class="input-group input-group-rounded">
                 <input type="number" placeholder="Enter User quantity" name="quantity" class="form-control">
+
+        </div>
+        <div class="form-group">
+                <br>
+     <h1>Upload Image</h1>
+             <div class="input-group input-group-rounded">
+                <input type="file" placeholder="Enter User image" name="image" class="form-control">
 
         </div>
         <br>

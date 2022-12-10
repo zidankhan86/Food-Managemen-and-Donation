@@ -12,12 +12,12 @@
                     <li class="label">Apps</li>
                     <li><a href="{{route('Category')}}" ><i class="ti-list"></i> Category </a>
                     </li>
-                    <li><a href="{{route('restaurant.list')}}"><i></i>   Restaurant </a></li>
+                    <li><a href="{{route('restaurant.list')}}"><i class="ti-home"></i>   Restaurant </a></li>
 
-                    <li><a href="{{route('customer')}}"><i class="bi bi-person"></i>  Customers </a>
+                    <li><a href="{{route('customer')}}"><i class="ti-customer"></i>  Customers </a>
 
                     </li>
-                    <li><a href="{{route('product.list')}}"><i></i>  Product </a>
+                    <li><a href="{{route('product.list')}}"><i class="ti-product"></i>  Product </a>
                     </li>
 
                     </li>
@@ -26,9 +26,12 @@
                     <li><a href="{{route('donate.list')}}"> <i></i> Donate </a></li>
 
                     <li><a href="{{url('/stock')}}"> <i></i> Stock</a></li>
+
                     <li><a href="{{route('food.list')}}"><i></i> Food</a></li>
 
-                    <li><a><i class="ti-close"></i> Logout</a></li>
+                    <li><a href="{{route('requestFor.food')}}"><i></i> Food Request</a></li>
+
+
                 </ul>
             </div>
         </div>
