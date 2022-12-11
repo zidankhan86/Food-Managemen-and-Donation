@@ -15,7 +15,7 @@ class OrganizationController extends Controller
     }
     public function organization_form()
     {
-        
+
         return view('backend.pages.organization.organization_form');
     }
     public function store(Request $req)
@@ -26,7 +26,7 @@ class OrganizationController extends Controller
 
         ]);
 
-        
+
         Organization::create([
 
             //column name - input field name
@@ -34,9 +34,14 @@ class OrganizationController extends Controller
             "name" => $req-> name,
             //"id" => $req->id,
             "details" => $req->details,
-           
+
 
         ]);
         return redirect()->back();
+    }
+
+    public function profile()
+    {
+        return view('frontend.pages.profile.profile');
     }
 }

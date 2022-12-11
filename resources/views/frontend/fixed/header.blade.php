@@ -35,9 +35,7 @@
                          {{auth()->user()->name}}
                          </button>
                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                              <li><a href="#"  class="text-primary" style="color:black ;">Profile</a></li>
-                              <li><a href="#"  class="text-primary" style="color:black ;">Another action</a></li>
-                              <li><a href="#"  class="text-primary" style="color: black;">Something else here</a></li>
+                              <li><a href="{{route('org.profile')}}"  class="text-primary" style="color:black ;">Profile</a></li>
                               <li><a href="{{route('Logout_frontend')}}" class="text-primary" style="color: black;">Logout</a></li>
                          </ul>
 

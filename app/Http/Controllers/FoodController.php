@@ -28,7 +28,7 @@ class FoodController extends Controller
             $imageName=date('Ymdhsis').'.'.$req->file('image')->getClientOriginalExtension();
             $req->file('image')->storeAs('/uploads', $imageName);
         }
-        // dd($imageName);
+        
         //dd($imageName);
             Food::create([
                 "food_name"=>$req->food_name,

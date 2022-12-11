@@ -213,11 +213,8 @@
  <section id="contact" data-stellar-background-ratio="0.5">
       <div class="container">
            <div class="row">
-                <!-- How to change your own map point
-            1. Go to Google Maps
-            2. Click on your location point
-            3. Click "Share" and choose "Embed map" tab
-            4. Copy only URL and paste it within the src="" field below
+                 
+          <!--  4. Copy only URL and paste it within the src="" field below
 	-->
                 <div class="wow fadeInUp col-md-6 col-sm-12" data-wow-delay="0.4s">
                 <div class="wow fadeInUp about-image" data-wow-delay="0.6s">
