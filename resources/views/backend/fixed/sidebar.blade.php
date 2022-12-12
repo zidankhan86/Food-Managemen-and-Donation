@@ -9,13 +9,13 @@
 
                     <li><a href="{{route('food.list')}}"><i></i> Food</a></li>
 
-                    <li><a href="{{route('Category')}}" ><i class="ti-list"></i> Category </a></li>
+                    <li><a href="{{route('Category')}}" ><i class=""></i> Category </a></li>
 
-                    <li><a href="{{route('restaurant.list')}}"><i class="ti-home"></i>   Restaurant </a></li>
+                    <li><a href="{{route('restaurant.list')}}"><i class=""></i>   Restaurant </a></li>
 
-                    <li><a href="{{route('customer')}}"><i class="ti-customer"></i>  Customers </a></li>
+                    <li><a href="{{route('customer')}}"><i class=""></i>  Customers </a></li>
 
-                    <li><a href="{{route('product.list')}}"><i class="ti-product"></i>  Product </a></li>
+                    <li><a href="{{route('product.list')}}"><i class=""></i>  Product </a></li>
 
                     <li><a href="{{route('organization')}}"><i></i>  Organization </a></li>
 

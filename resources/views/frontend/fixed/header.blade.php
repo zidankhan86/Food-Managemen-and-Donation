@@ -29,6 +29,7 @@
 
 
 
+                    @if (auth()->user()->role=='organization')
                     <div class="dropdown">
 
                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -39,8 +40,28 @@
                               <li><a href="{{route('Logout_frontend')}}" class="text-primary" style="color: black;">Logout</a></li>
                          </ul>
 
-                         <a href="" class="btn btn-success"><b>Donate <br>Now</a>
+
                     </div>
+                    @else
+
+                    <!--For restaurant -->
+
+                    <div class="dropdown">
+
+                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                         {{auth()->user()->name}}
+                         </button>
+                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                              <li><a href="{{route('org.profile')}}"  class="text-primary" style="color:black ;">Profile</a></li>
+                              <li><a href=""  class="text-primary" style="color:black ;">Add food</a></li>
+                              <li><a href="{{route('Logout_frontend')}}" class="text-primary" style="color: black;">Logout</a></li>
+                         </ul>
+
+
+                    </div>
+
+                    @endif
+
                     @else
                     <li><a href="#" data-toggle="modal" data-target="#login">Login</a></li>
                     <li><a href="#" data-toggle="modal" data-target="#signup">Sign Up</a></li>

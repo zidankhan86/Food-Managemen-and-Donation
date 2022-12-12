@@ -40,39 +40,33 @@
                         <h6 class="text-danger">E-mail must be valid and message must be longer than 1 character.</h6>
 
                         <div class="col-md-6 col-sm-6">
-                            <label for="">Name</label>
-                            <input type="text" class="form-control" id="cf-name" name="name" placeholder="Restaurant Name">
+
+                            <input type="text" class="form-control" id="cf-name" name="name" placeholder="Your Name">
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            <label for="">Category</label>
-                            <input type="text" class="form-control" id="cf-name" name="category" placeholder="Category Name">
+
+                            <input type="text" class="form-control" id="cf-name" name="category" placeholder="Your Phone">
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            <label for="">Dish Name</label>
-                            <input type="text" class="form-control" id="cf-name" name="dish_item" placeholder="Dish Name">
+
+                            <input type="text" class="form-control" id="cf-name" name="dish_item" placeholder="Enter Your Email">
                         </div>
                         <div class="col-md-6 col-sm-6">
-                        <label for="">Price</label>
-                        <input type="number" class="form-control" id="cf-name" name="price" placeholder="Enter Price">
+
+                        <input type="number" class="form-control" id="cf-name" name="price" placeholder="Enter Amount">
                         </div>
 
                         <div class="col-md-6 col-sm-6">
-                        <label for="">Image</label>
-                            <input type="file" class="form-control" id="cf-email" name="image" placeholder="Upload Food Image">
-                       </div>
+                  <select>
+                    <option value="">Dhaka</option>
+                    <option value="">Barishal</option>
+                    <option value="">chittagong</option>
+                    <option value="">Rajshahi</option>
+                    <option value="">Khulna</option>
+                </div>
+                            <input type="text" class="form-control" id="cf-email" name="City" placeholder="Select City">
 
-                       <div class="col-md-6 col-sm-6">
-                            <label for="">Description</label>
-                            <input type="text" class="form-control" id="cf-email" name="description" placeholder="Enter Food Description">
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <label for="">Contract</label>
-                            <input type="number" class="form-control" id="cf-email" name="contract" placeholder="Enter Restaurant Contract">
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <label for="">Quantity</label>
-                            <input type="text" class="form-control" id="cf-email" name="quantity" placeholder="Enter  quantity">
-                        </div>
+                    </select>
 
                         <div class="col-md-12 col-sm-12">
 

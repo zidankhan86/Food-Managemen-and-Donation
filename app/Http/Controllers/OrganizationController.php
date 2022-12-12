@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FoodRequest;
 use App\Models\Organization;
 use Illuminate\Http\Request;
 
@@ -42,6 +43,8 @@ class OrganizationController extends Controller
 
     public function profile()
     {
-        return view('frontend.pages.profile.profile');
+        $ngoFoodRequest = FoodRequest::where('user_id',auth()->user()->id)->get();
+        // dd($ngoFoodRequest);
+        return view('frontend.pages.profile.profile',compact('ngoFoodRequest'));
     }
 }
