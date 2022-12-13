@@ -23,6 +23,8 @@
 
                     <li><a href="{{route('requestFor.food')}}"><i></i> Food Request</a></li>
 
+                    <li><a href="{{route('report.generate')}}"><i></i>Report</a></li>
+
                 </ul>
             </div>
         </div>

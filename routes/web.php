@@ -20,6 +20,7 @@ use App\Http\Controllers\RestaurantController;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\ReportCotroller;
 use App\Http\Controllers\RoleController;
 
 /*
@@ -45,6 +46,11 @@ Route::post('/user/login',[AuthController::class,'login'])->name('login');
 Route::get('/menu/dishes',[MenuController::class,'menu'])->name('menu.dishes');
 Route::post('/restaurant/donate',[RestaurantController::class,'donateForm'])->name('restaurant.donateForm');
 
+Route::get('/food/frontend',[FoodController::class,'food_frontend'])->name('food.frontend');
+Route::post('/food/frontend-submit',[FoodController::class,'foodFrontend'])->name('food.foodFrontend');
+
+Route::get('/report/generate',[ReportCotroller::class,'report_generate'])->name('report.generate');
+Route::post('/report/generate/submit',[ReportCotroller::class,'report_generate'])->name('report.generate.submit');
 
 
 

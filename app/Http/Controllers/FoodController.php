@@ -28,7 +28,7 @@ class FoodController extends Controller
             $imageName=date('Ymdhsis').'.'.$req->file('image')->getClientOriginalExtension();
             $req->file('image')->storeAs('/uploads', $imageName);
         }
-        
+
         //dd($imageName);
             Food::create([
                 "food_name"=>$req->food_name,
@@ -66,6 +66,24 @@ class FoodController extends Controller
             return back();
 
         }
+        public function food_frontend(){
 
+        return view('frontend.pages.foodFrontend');
+
+        }
+        public function foodFrontend(Request $request){
+            $imageName=null;
+            if ($request->hasFile('image')) {
+                $imageName=date('Ymdhsis').'.'.$request->file('image')->getClientOriginalExtension();
+                $request->file('image')->storeAs('/uploads', $imageName);
+            }
+            Food::create([
+                'food_name'=>$request->food_name,
+                'user_id'=>auth()->user()->id,
+                'quantity'=>$request->quantity,
+                'image'=>$imageName
+            ]);
+            return back(); 
+        }
 
 }

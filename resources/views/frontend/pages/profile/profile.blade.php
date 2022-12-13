@@ -1,11 +1,11 @@
 @extends('frontend.master')
 @section('content')
-<div class="container-fluid mt-3">
-    <div class="row">
+<div class="container-fluid mt-5">
+    <div class="row mt-5">
         <div class="col-md-3">
         </div>
         <div class="col-md-3">
-            <div class="img-container">
+            <div class="img-container mt-5">
                 <p class="fs-5 mt-5">Customer Profile</p>
                 <img class="w-25 h-auto" src="https://cdn.pixabay.com/photo/2015/03/04/22/35/avatar-659651__340.png" alt="">
             </div>
