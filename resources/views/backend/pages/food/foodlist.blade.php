@@ -26,7 +26,9 @@
                                                         <td scope="col">{{$data->food_name}}</td>
                                                         <td scope="col">{{$data->user_id}}</td>
                                                         <td>{{$data->quantity}}</td>
-                                                        <td class="color-primary">Edit/Delete/Update</td>
+                                                      <td>
+                                                        <a class="btn btn-success" href="">Edit</a>
+                                                        <a class="btn btn-danger" href="">Delete</a></td>
                                                     </tr>
                                                     @endforeach
 

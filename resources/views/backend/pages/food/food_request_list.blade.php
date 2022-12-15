@@ -2,7 +2,7 @@
 @section('content')
 <h4>Food List </h4>
 <a href="" class="btn btn-success">Food Request Info</a>
-                        <div class="row">
+                        <div class="row" id="printableArea">
                             <div class="col-lg-10">
                                 <div class="card">
                                     <div class="card-title">
@@ -43,6 +43,18 @@
                                 </div>
                             </div>
                         </div>
+                        <input type="button" onclick="printDiv('printableArea')" value="print a div!" class="btn btn-primary"/>
+<script>
+    function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
 
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+</script>
 @endsection
 

@@ -9,11 +9,7 @@
 
                     <li><a href="{{route('food.list')}}"><i></i> Food</a></li>
 
-                    <li><a href="{{route('Category')}}" ><i class=""></i> Category </a></li>
-
-                    <li><a href="{{route('restaurant.list')}}"><i class=""></i>   Restaurant </a></li>
-
-                    <li><a href="{{route('customer')}}"><i class=""></i>  Customers </a></li>
+                    <!--<li><a href="{{route('Category')}}" ><i class=""></i> Category </a></li>-->
 
                     <li><a href="{{route('product.list')}}"><i class=""></i>  Product </a></li>
 
@@ -24,6 +20,10 @@
                     <li><a href="{{route('requestFor.food')}}"><i></i> Food Request</a></li>
 
                     <li><a href="{{route('report.generate')}}"><i></i>Report</a></li>
+
+                    <li><a href=""><i class=""></i> Payment </a></li>
+                    
+                    <li><a href="{{route('Logout_frontend')}}"><i class=""></i>  Logout </a></li>
 
                 </ul>
             </div>

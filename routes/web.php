@@ -33,7 +33,25 @@ use App\Http\Controllers\RoleController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// SSLCOMMERZ Start
+Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
+Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
+
+Route::post('/pay', [SslCommerzPaymentController::class, 'index']);
+Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
+
+Route::post('/success', [SslCommerzPaymentController::class, 'success']);
+Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
+Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
+
+Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
+//SSLCOMMERZ END
+
+
+
 //frontend
+
 
 Route::get('/',[WebController::class,'home'])->name('home');
 Route::get('/about',[AboutController::class,'about'])->name('about');
@@ -51,7 +69,7 @@ Route::post('/food/frontend-submit',[FoodController::class,'foodFrontend'])->nam
 
 Route::get('/report/generate',[ReportCotroller::class,'report_generate'])->name('report.generate');
 Route::post('/report/generate/submit',[ReportCotroller::class,'report_generate'])->name('report.generate.submit');
-
+Route::get('/gallery',[MenuController::class,'gallery'])->name('gallery');
 
 
     Route::group(['middleware'=>'auth'], function(){

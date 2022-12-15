@@ -14,4 +14,8 @@ class MenuController extends Controller
         return view('frontend.pages.menu', compact('dishes'));
 
     }
+    public function gallery(){
+
+        return view('frontend.pages.gallery');
+    }
 }

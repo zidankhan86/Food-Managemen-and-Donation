@@ -16,11 +16,9 @@
                <ul class="nav navbar-nav navbar-nav-first">
                     <li><a href="{{route('home')}}" class="smoothScroll" style="color:white ;">Home</a></li>
                     <li><a href="{{route('about')}}" class="smoothScroll" style="color: white;">About</a></li>
-                    <li><a href="" class="smoothScroll" style="color: white;">Category</a></li>
+                    <li><a href="{{route('gallery')}}" class="smoothScroll" style="color: white;">Gallery</a></li>
                     <li><a href="{{route('contract')}}" class="smoothScroll" style="color:white ;">Contact</a></li>
-                    @auth
-                    <li><a href="{{route('doante.about')}}" class="smoothScroll" style="color: white;">Restaurant</a></li>
-                    @endauth
+
                     <li><a href="{{route('menu.dishes')}}" class="smoothScroll" style="color:white ;">Food</a></li>
                </ul>
 

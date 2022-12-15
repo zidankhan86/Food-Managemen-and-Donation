@@ -1,7 +1,7 @@
 @extends('backend.admin')
 @section('content')
 <br>
-<h5 style="text-align:center">Food List</h5>
+<h5 style="text-align:center">Food Form</h5>
 <br>
 <br>
 <form action="{{route('food.store')}}" method="POST" enctype="multipart/form-data">

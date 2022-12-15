@@ -53,8 +53,14 @@ class FoodController extends Controller
     }
 
         public function approve($id){
-            $foodrequest = FoodRequest::find($id)->update([
+            $foodrequest = FoodRequest::find($id);
+            $foodrequest->update([
                 'status'=>'approve'
+            ]);
+            $food = Food::where('id',$foodrequest->food_id)->first();
+
+            $food->update([
+                'quantity'=>$food->quantity - 1,
             ]);
             return back();
 
@@ -83,7 +89,7 @@ class FoodController extends Controller
                 'quantity'=>$request->quantity,
                 'image'=>$imageName
             ]);
-            return back(); 
+            return back();
         }
 
 }
