@@ -29,8 +29,8 @@
                      </div>
 
                      <!-- CONTACT FORM -->
-                     <form action="#" method="post" class="wow fadeInUp" id="contact-form" role="form" data-wow-delay="0.8s">
-
+                     <form action="{{route('contract.us')}}" method="post" class="wow fadeInUp" id="contact-form" role="form" data-wow-delay="0.8s">
+                        @csrf
                           <!-- IF MAIL SENT SUCCESSFUL  // connect this with custom JS -->
                           <h6 class="text-success">Your message has been sent successfully.</h6>
 

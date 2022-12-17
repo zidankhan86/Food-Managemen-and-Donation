@@ -63,8 +63,8 @@
                    </div>
 
                    <!-- CONTACT FORM -->
-                   <form action="#" method="post" class="wow fadeInUp" id="contact-form" role="form" data-wow-delay="0.8s">
-
+                   <form action="{{route('donate.payment')}}" method="post" class="wow fadeInUp" id="contact-form" role="form" data-wow-delay="0.8s">
+@csrf
                         <!-- IF MAIL SENT SUCCESSFUL  // connect this with custom JS -->
                         <h6 class="text-success">Your message has been sent successfully.</h6>
 
@@ -81,14 +81,14 @@
                         </div>
 
                         <div class="col-md-6 col-sm-6">
-                            <input type="text" class="form-control" id="cf-email" name="email" placeholder="Country Name">
+                            <input type="text" class="form-control" id="cf-email" name="city_name" placeholder="City Name">
                        </div>
 
                        <div class="col-md-6 col-sm-6">
-                        <input type="number" class="form-control" id="cf-email" name="email" placeholder="phone">
+                        <input type="number" class="form-control" id="cf-email" name="phone" placeholder="phone">
                    </div>
                    <div class="col-md-6 col-sm-6">
-                    <input type="number" class="form-control" id="cf-email" name="email" placeholder="Enter Amount">
+                    <input type="number" class="form-control" id="cf-email" name="amount" placeholder="Enter Amount">
                </div>
 
                         <div class="col-md-12 col-sm-12">

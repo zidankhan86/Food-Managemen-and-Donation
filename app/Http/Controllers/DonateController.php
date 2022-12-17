@@ -38,4 +38,19 @@ class DonateController extends Controller
         ]);
         return redirect()->route('donate.list');
     }
+    public function payment(Request $request){
+
+        Donate::create([
+
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'city_name'=>$request->city_name,
+            'phone'=>$request->phone,
+            'amount'=>$request->amount,
+            'message'=>$request->message
+
+
+        ]);
+        return redirect()->back();
+    }
 }

@@ -26,7 +26,7 @@
 
   <div class="container">
     <div class="container">
-        <table class="table">
+        <table class="table" id="printableArea">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -56,5 +56,30 @@
         </table>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-1"></div>
+        <button class="btn btn-success" onclick="printDiv('printableArea')" value="print a div!" >Print</button>
+    </div>
+    <div class="col-md-7"></div>
+</div>
+
+
+<script>
+        function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+        }
+</script>
+
+
+
 
   @endsection

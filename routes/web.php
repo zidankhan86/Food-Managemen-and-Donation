@@ -35,20 +35,14 @@ use App\Http\Controllers\RoleController;
 */
 
 // SSLCOMMERZ Start
-Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
-Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
 
-Route::post('/pay', [SslCommerzPaymentController::class, 'index']);
-Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
 
+Route::post('/pay', [SslCommerzPaymentController::class, 'index'])->name('pay.ssl');
 Route::post('/success', [SslCommerzPaymentController::class, 'success']);
 Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
 Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
 
-Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
 //SSLCOMMERZ END
-
-
 
 //frontend
 
@@ -57,6 +51,8 @@ Route::get('/',[WebController::class,'home'])->name('home');
 Route::get('/about',[AboutController::class,'about'])->name('about');
 Route::get('/about/donate',[DonateAboutController::class,'donate_about'])->name('doante.about');
 Route::get('/contract',[ContractController::class,'contract_frontend'])->name('contract');
+Route::post('/contract/us',[ContractController::class,'contract_us'])->name('contract.us');
+Route::post('donate/payment',[DonateController::class,'payment'])->name('donate.payment');
 Route::get('/restaurant_frontend',[FrontendRestaurantController::class,'restaurant_frontend'])->name('restaurant.frotend');
 Route::get('/visitor/donate',[DonateAboutController::class,'visitor_donate'])->name('visitor.donate');
 Route::post('/user/signin',[AuthController::class,'signin'])->name('signin');

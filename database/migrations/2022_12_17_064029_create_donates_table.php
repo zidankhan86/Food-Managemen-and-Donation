@@ -1,5 +1,5 @@
 <?php
-use App\Models\Donate;
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,12 +15,13 @@ return new class extends Migration
     {
         Schema::create('donates', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->string('city_name');
             $table->string('phone');
-            $table->string('donatator_name');
-            $table->string('email')->nullable();
             $table->double('amount');
+            $table->string('message');
             $table->timestamps();
-          
         });
     }
 
@@ -32,7 +33,5 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('donates');
-        
     }
-
 };
