@@ -30,13 +30,8 @@ class DonateController extends Controller
 
         ]);
         // dd($req->all());
-        Donate::create([
-            'donatator_name' => $req->name,
-            'phone' => $req->phone,
-            'email' => $req->email,
-            'amount' => $req->amount
-        ]);
-        return redirect()->route('donate.list');
+       // Donate::create([ ]);
+        //return redirect()->route('donate.list');
     }
     public function payment(Request $request){
 

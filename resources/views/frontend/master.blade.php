@@ -3,9 +3,9 @@
 <head>
 
      <title>Eatery Cafe and Restaurant Template</title>
-<!-- 
+<!--
 
-Eatery Cafe Template 
+Eatery Cafe Template
 
 http://www.templatemo.com/tm-515-eatery
 
@@ -33,17 +33,10 @@ http://www.templatemo.com/tm-515-eatery
 </head>
 <body>
 
-     <!-- PRE LOADER -->
-     <section class="preloader">
-          <div class="spinner">
-
-               <span class="spinner-rotate"></span>
-               
-          </div>
-     </section>
+    
 
 
-     
+
 
      @include('frontend.fixed.header')
 
@@ -54,7 +47,7 @@ http://www.templatemo.com/tm-515-eatery
      </section>
 
 
-             
+
 
 
      @include('frontend.fixed.footer')
@@ -62,7 +55,7 @@ http://www.templatemo.com/tm-515-eatery
 
      <!-- SCRIPTS -->
      <script src="{{url('/frontend/js/jquery.js')}}"></script>
-      <script src="{{url('/frontend/js/bootstrap.min.js')}}"></script> 
+      <script src="{{url('/frontend/js/bootstrap.min.js')}}"></script>
 
      <script src="{{url('/frontend/js/jquery.stellar.min.js')}}"></script>
      <script src="{{url('/frontend/js/wow.min.js')}}"></script>

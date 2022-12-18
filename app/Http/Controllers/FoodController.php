@@ -21,7 +21,14 @@ class FoodController extends Controller
     }
     public function food_store(Request $req){
         //  dd($req->all());
-
+$req->validate(
+[
+'food_name'=>'required',
+'user_id'=>'required',
+'quantity'=>'required',
+'image'=>'required'
+]
+);
 
         $imageName=null;
         if ($req->hasFile('image')) {
@@ -62,6 +69,8 @@ class FoodController extends Controller
             $food->update([
                 'quantity'=>$food->quantity - 1,
             ]);
+     notify()->success('Food Request Approved');
+
             return back();
 
         }
@@ -69,6 +78,7 @@ class FoodController extends Controller
             $foodrequest = FoodRequest::find($id)->update([
                 'status'=>'rejected'
             ]);
+            notify()->error('Food Request Reject');
             return back();
 
         }

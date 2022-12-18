@@ -13,20 +13,21 @@
                          </div>
                     </div>
 
-                    <div class="row">
-                         @foreach($dishes as $data)
-                              <div class="col-md-3">
-                              <div class="card" style="width: 18rem;">
-                                   <img width="300px" src="{{url('/uploads/'.$data->image)}}" class="card-img-top" alt="...">
-                                   <div class="card-body">
-                                        <h5 class="card-title">  Stock: {{$data->quantity}}</h5>
-                                        <p class="card-text">Food Name: {{$data->food_name}}.<br>Price: {{$data->price}}Free</p>
-                                   <a href="{{route('food.request',$data->id)}}" class="btn btn-primary">Food request</a>
-                                   </div>
-                              </div>
-                              </div>
-                         @endforeach
-                    </div>
+                </div>
+                <div class="row">
+                    @foreach($dishes as $data)
+                         <div class="col-md-3" style="margin-bottom: 5px">
+                                <div>
+                                     <img style="width:100%" src="{{url('/uploads/'.$data->image)}}" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                         <h5 class="card-title">  Stock: {{$data->quantity}}</h5>
+                                         <p class="card-text">Food Name: {{$data->food_name}}.<br>Price: {{$data->price}}Free</p>
+                                    <a href="{{route('food.request',$data->id)}}" class="btn btn-primary">Food request</a>
+
+                                 </div></div>
+
+                         </div>
+                    @endforeach
                </div>
           </div>
      </section>

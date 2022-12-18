@@ -6,6 +6,11 @@
 <br>
 <form action="{{route('food.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
+        @if($errors->any())
+        @foreach($errors->all() as $message)
+        <p class="alert alert-danger">{{$message}}</p>
+        @endforeach
+          @endif
 
 
        <div class="form-group">
@@ -13,6 +18,7 @@
         <h1>Food Name</h1>
              <div class="input-group input-group-rounded">
                 <input type="text" placeholder="Enter Food Name" name="food_name" class="form-control">
+
 
         </div>
         <br>

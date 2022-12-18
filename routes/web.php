@@ -137,14 +137,16 @@ Route::group(['middleware'=>'auth','adminchecker','prefix'=>'admin'], function()
     Route::post('/food/store',[FoodController::class,'food_store'])->name('food.store');
 
 
-    Route::get('food/request/{food_id}',[FoodController::class,'food_request'])->name('food.request');
-    Route::get('/request/list',[FoodController::class,'request_list'])->name('requestFor.food');
 
     Route::get('/approve/{id}',[FoodController::class,'approve'])->name('approve');
     Route::get('/reject/{id}',[FoodController::class,'reject'])->name('reject');
 
 Route::get('/organization/profile',[OrganizationController::class,'profile'])->name('org.profile');
 
+Route::get('/request/list',[FoodController::class,'request_list'])->name('requestFor.food');
+});
+Route::group(['middleware'=>'CheckOrganizationMiddleware'],function(){
+    Route::get('food/request/{food_id}',[FoodController::class,'food_request'])->name('food.request');
 });
 
 
