@@ -63,7 +63,7 @@
                    </div>
 
                    <!-- CONTACT FORM -->
-                   <form action="{{route('donate.payment')}}" method="post" class="wow fadeInUp" id="contact-form" role="form" data-wow-delay="0.8s">
+                   <form action="{{route('ssl.payment')}}" method="post" class="wow fadeInUp" id="contact-form" role="form" data-wow-delay="0.8s">
 @csrf
                         <!-- IF MAIL SENT SUCCESSFUL  // connect this with custom JS -->
                         <h6 class="text-success">Your message has been sent successfully.</h6>
@@ -73,30 +73,30 @@
 
                         <div class="col-md-6 col-sm-6">
 
-                             <input type="text" class="form-control" id="cf-name" name="name" placeholder="Full name">
+                             <input type="text" class="form-control" id="cf-name" name="name" required placeholder="Full name">
                         </div>
 
                         <div class="col-md-6 col-sm-6">
-                             <input type="email" class="form-control" id="cf-email" name="email" placeholder="Email address">
+                             <input type="email" class="form-control" id="cf-email" name="email" required placeholder="Email address">
                         </div>
 
                         <div class="col-md-6 col-sm-6">
-                            <input type="text" class="form-control" id="cf-email" name="city_name" placeholder="City Name">
+                            <input type="text" class="form-control" id="cf-email" name="city_name"required  placeholder="City Name">
                        </div>
 
                        <div class="col-md-6 col-sm-6">
-                        <input type="number" class="form-control" id="cf-email" name="phone" placeholder="phone">
+                        <input type="number" class="form-control" id="cf-email" name="phone" required placeholder="phone">
                    </div>
                    <div class="col-md-6 col-sm-6">
-                    <input type="number" class="form-control" id="cf-email" name="amount" placeholder="Enter Amount">
+                    <input type="number" class="form-control" id="cf-email" name="amount" required placeholder="Enter Amount">
                </div>
 
                         <div class="col-md-12 col-sm-12">
 
 
-                             <textarea class="form-control" rows="6" id="cf-message" name="message" placeholder="Leave A Comment"></textarea>
+                             <textarea class="form-control" rows="6" id="cf-message" name="message" required placeholder="Leave A Comment"></textarea>
 
-                             <button type="submit" class="form-control" id="cf-submit" name="submit">PAY WITH CARD/BKASH</button>
+                             <button type="submit" class="form-control" id="cf-submit" name="submit"><i class="fa fa-credit-card"></i>PAY WITH CARD/BKASH</button>
                         </div>
                    </form>
               </div>

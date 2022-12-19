@@ -38,17 +38,17 @@
                           <h6 class="text-danger">E-mail must be valid and message must be longer than 1 character.</h6>
 
                           <div class="col-md-6 col-sm-6">
-                               <input type="text" class="form-control" id="cf-name" name="name" placeholder="Full name">
+                               <input type="text" class="form-control" id="cf-name" name="name" required placeholder="Full name">
                           </div>
 
                           <div class="col-md-6 col-sm-6">
-                               <input type="email" class="form-control" id="cf-email" name="email" placeholder="Email address">
+                               <input type="email" class="form-control" id="cf-email" name="email" required placeholder="Email address">
                           </div>
 
                           <div class="col-md-12 col-sm-12">
-                               <input type="text" class="form-control" id="cf-subject" name="subject" placeholder="Subject">
+                               <input type="text" class="form-control" id="cf-subject" name="subject" required  placeholder="Subject">
 
-                               <textarea class="form-control" rows="6" id="cf-message" name="message" placeholder="Drop Your Comment"></textarea>
+                               <textarea class="form-control" rows="6" id="cf-message" name="message" required placeholder="Drop Your Comment"></textarea>
 
                                <button type="submit" class="form-control" id="cf-submit" name="submit">Send Message</button>
                           </div>

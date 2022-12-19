@@ -1,6 +1,6 @@
 @extends('backend.admin')
 @section('content')
-<form action="{{route('donate.store')}}" method="post">
+<form action="{{route('ssl.payment')}}" method="post">
   @csrf
   @if($errors->any() )
   @foreach($errors->all() as $message)
@@ -12,7 +12,7 @@
     <lebel for="name">Enter Donatior Name</lebel>
    <input type="text" class="form-control input-rounded" name="name" placeholder="Enter Donatior Name">
    </div>
-   
+
   <div class="form-group">
     <lebel for="phone">Enter Donatior Phone</lebel>
    <input type="tel" class="form-control input-rounded" name="phone" placeholder="Enter Donatior Phone">
@@ -24,8 +24,8 @@
     <label for="amount">Donation Amount</label>
     <input type="number" class="form-control input-rounded" name="amount" placeholder="Enter Amount">
   </div>
-  
+
   <button type="submit" class="btn btn-success">Submit</button>
-  
+
 </form>
 @endsection

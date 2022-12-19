@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class DonateController extends Controller
 {
+
+    public function payment_list(){
+        $paymentList=Donate::all();
+
+        return view('backend.pages.payment.payement', compact('paymentList'));
+    }
+
     public function donate()
     {
 

@@ -10,7 +10,7 @@
                           <div class="col-md-8 col-sm-12">
                                <h3>Donate  &amp; Enjoy </h3>
                                <h1>Our mission is to provide free food for all </h1>
-                               <a href="{{route('doante.about')}}" class="section-btn btn btn-default smoothScroll">Donate </a>
+
                           </div>
                      </div>
                 </div>
@@ -22,7 +22,7 @@
                           <div class="col-md-8 col-sm-12">
                                <h3>This is Your Own Restaurant</h3>
                                <h1>Donate Your Unsold Food .A New Day Start With A New Hope . </h1>
-                               <a href="{{route('doante.about')}}" class="section-btn btn btn-default smoothScroll">Donate Now</a>
+                               
                           </div>
                      </div>
                 </div>
@@ -213,7 +213,7 @@
  <section id="contact" data-stellar-background-ratio="0.5">
       <div class="container">
            <div class="row">
-                 
+
           <!--  4. Copy only URL and paste it within the src="" field below
 	-->
                 <div class="wow fadeInUp col-md-6 col-sm-12" data-wow-delay="0.4s">
