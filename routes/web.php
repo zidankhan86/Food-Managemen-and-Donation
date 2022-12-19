@@ -137,6 +137,7 @@ Route::group(['middleware'=>'auth','adminchecker','prefix'=>'admin'], function()
     Route::get('/food',[FoodController::class,'list'])->name('food.list');
     Route::get('/food/create',[FoodController::class,'food_create'])->name('food.create');
     Route::post('/food/store',[FoodController::class,'food_store'])->name('food.store');
+    Route::get('/delete/food/{food_id}',[FoodController::class,'food_delete'])->name('food.delete');
 
 
 

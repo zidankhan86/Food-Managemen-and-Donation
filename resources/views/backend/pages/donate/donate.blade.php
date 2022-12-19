@@ -24,7 +24,7 @@
                             <th>Phone</th>
                             <th>E-mail</th>
                             <th>Amount</th>
-                            <th>Action</th>
+                            
                         </tr>
                     </thead>
                     <tbody>

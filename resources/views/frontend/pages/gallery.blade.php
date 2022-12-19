@@ -21,12 +21,10 @@
 
                              <div class="menu-info">
                                   <div class="menu-item">
-                                       <h3>American Breakfast</h3>
-                                       <p>Tomato / Eggs / Sausage</p>
+                                       <h3>Donate and Smile</h3>
+
                                   </div>
-                                  <div class="menu-price">
-                                       <span>$25</span>
-                                  </div>
+
                              </div>
                         </a>
                    </div>
@@ -40,12 +38,10 @@
 
                              <div class="menu-info">
                                   <div class="menu-item">
-                                       <h3>Self-made Salad</h3>
-                                       <p>Green / Fruits / Healthy</p>
+                                       <h3>Donate and Smile</h3>
+
                                   </div>
-                                  <div class="menu-price">
-                                       <span>$18</span>
-                                  </div>
+
                              </div>
                         </a>
                    </div>
@@ -59,12 +55,10 @@
 
                              <div class="menu-info">
                                   <div class="menu-item">
-                                       <h3>Chinese Noodle</h3>
-                                       <p>Pepper / Chicken / Vegetables</p>
+                                       <h3>Donate and Smile</h3>
+
                                   </div>
-                                  <div class="menu-price">
-                                       <span>$34</span>
-                                  </div>
+
                              </div>
                         </a>
                    </div>
@@ -78,12 +72,10 @@
 
                              <div class="menu-info">
                                   <div class="menu-item">
-                                       <h3>Rice Soup</h3>
-                                       <p>Green / Chicken</p>
+                                       <h3>Donate and Smile</h3>
+
                                   </div>
-                                  <div class="menu-price">
-                                       <span>$28</span>
-                                  </div>
+
                              </div>
                         </a>
                    </div>
@@ -97,12 +89,10 @@
 
                              <div class="menu-info">
                                   <div class="menu-item">
-                                       <h3>Deli Burger</h3>
-                                       <p>Beef / Fried Potatoes</p>
+                                       <h3>Donate and Smile</h3>
+
                                   </div>
-                                  <div class="menu-price">
-                                       <span>$46</span>
-                                  </div>
+
                              </div>
                         </a>
                    </div>
@@ -116,12 +106,10 @@
 
                              <div class="menu-info">
                                   <div class="menu-item">
-                                       <h3>Big Flat Fried</h3>
-                                       <p>Pepper / Crispy</p>
+                                       <h3>Donate and Smile</h3>
+
                                   </div>
-                                  <div class="menu-price">
-                                       <span>$30</span>
-                                  </div>
+                                  
                              </div>
                         </a>
                    </div>

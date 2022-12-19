@@ -101,5 +101,12 @@ $req->validate(
             ]);
             return back();
         }
+        public function food_delete($food_id){
+
+            $delete=Food::find($food_id);
+            $delete->delete();
+            notify()->success('Delete Successful');
+            return redirect()->route('food.list');
+        }
 
 }
