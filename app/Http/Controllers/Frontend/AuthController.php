@@ -10,7 +10,15 @@ use Illuminate\Support\Facades\Auth;
 class AuthController extends Controller
 {
     public function signin(Request $req){
-
+            $req->validate([
+                'name'=>'required',
+                'email'=>'required',
+                'address'=>'required',
+                'phone'=>'required',
+                'password'=>'required',
+                'phone'=>'regex:"/^\\+?[1-9][0-9]{7,14}$/"
+                '
+            ]);
 
 
             User::create([
@@ -34,6 +42,12 @@ class AuthController extends Controller
     }
 
 public function login(Request $req){
+ $req->validate([
+
+    'email'=>'required',
+    'password'=>'required'
+
+ ]);
 
     $login=$req->except('_token');
 

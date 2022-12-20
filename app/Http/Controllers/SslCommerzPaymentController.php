@@ -27,6 +27,7 @@ class SslCommerzPaymentController extends Controller
         # Let's say, your oder transaction informations are saving in a table called "orders"
         # In "orders" table, order unique identity is "transaction_id". "status" field contain status of the transaction, "amount" is the order amount to be paid and "currency" is for storing Site Currency which will be checked with paid currency.
 
+       if($request->amount > 0){
         $post_data = array();
         $post_data['total_amount'] = $request->amount; # You cant not pay less than 10
         $post_data['currency'] = "BDT";
@@ -98,6 +99,10 @@ Donate::create([
             print_r($payment_options);
             $payment_options = array();
         }
+       }else{
+        notify()->error('opppss !!','amount should be greater than 0');
+        return redirect()->back();
+       }
 
     }
 

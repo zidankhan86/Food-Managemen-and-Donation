@@ -22,7 +22,7 @@
                           <div class="col-md-8 col-sm-12">
                                <h3>This is Your Own Restaurant</h3>
                                <h1>Donate Your Unsold Food .A New Day Start With A New Hope . </h1>
-                               
+
                           </div>
                      </div>
                 </div>
@@ -263,92 +263,5 @@
       </div>
  </section>
 
-<!--Login Modal Start-->
-<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-           <div class="modal-content">
-                <div class="modal-header">
-                     <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                     </button>
-                </div>
-                <div class="modal-body">
-                     <form action="{{route('login')}}" method="post">
-                         @csrf
-                          <div class="form-group">
-                               <label>Email address</label>
-                               <input type="email" class="form-control" name="email" placeholder="Email">
-                          </div>
-
-                          <div class="form-group">
-                               <label>Password</label>
-                               <input type="password" class="form-control" name="password" placeholder="Password">
-                          </div>
-
-                          <div class="modal-footer">
-                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                               <button type="submit" class="btn btn-primary">Login</button>
-                          </div>
-                     </form>
-                </div>
-           </div>
-      </div>
- </div>
-<!--Login Modal end-->
-
-
- <!--Sign up Strarted Modal -->
- <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-           <div class="modal-content">
-                <div class="modal-header">
-                     <h5 class="modal-title" id="exampleModalLabel">SignUp please</h5>
-                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                     </button>
-                </div>
-                <div class="modal-body">
-                     <form action="{{route('signin')}}" method="post">
-                         @csrf
-                          <div class="form-group">
-                               <label>User Name</label>
-                               <input type="text" class="form-control" name="name" placeholder="User Name">
-                          </div>
-                          <div class="form-group">
-                               <label>Email address</label>
-                               <input type="email" class="form-control" name="email" placeholder="Email">
-                          </div>
-                          <div class="form-group">
-                               <label>Address</label>
-                               <input type="text" class="form-control" name="address" placeholder="Address">
-                          </div>
-                          <div class="form-group">
-                               <label>Phone</label>
-                               <input type="number" class="form-control" name="phone" placeholder="Phone">
-                          </div>
-                          <div class="form-group">
-                               <label>Password</label>
-                               <input type="password" class="form-control" name="password" placeholder="Password">
-                          </div>
-                          <div>
-                            <label for="">Sign up as</label>
-                            <select name="role">
-                                <option value="restaurant">Restaurant</option>
-                                <option value="organization">Organization</option>
-                            </select>
-                          </div>
-
-                          <div class="modal-footer">
-                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                               <button type="submit" class="btn btn-primary">Submit</button>
-                          </div>
-                     </form>
-                </div>
-           </div>
-      </div>
- </div>
-
-<!--Sign up End Modal -->
 
  @endsection

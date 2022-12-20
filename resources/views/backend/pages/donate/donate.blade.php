@@ -19,12 +19,11 @@
                 <table class="table table-hover ">
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th scope="col">ID</th>
                             <th>Name</th>
                             <th>Phone</th>
                             <th>E-mail</th>
-                            <th>Amount</th>
-                            
+                            <th scope="col">Amount</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -32,7 +31,7 @@
 
                         <tr>
                             <th scope="col">{{$data->id}}</th>
-                            <th scope="col">{{$data->donatator_name}}</th>
+                            <th scope="col">{{$data->name}}</th>
                             <th scope="col">{{$data->phone}}</th>
                             <th scope="col">{{$data->email}}</th>
                             <th scope="col">{{$data->amount}}</th>

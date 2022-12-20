@@ -27,9 +27,9 @@
                                                         <td scope="col">{{$data->user_id}}</td>
                                                         <td>{{$data->quantity}}</td>
                                                       <td>
-                                                        <a class="btn btn-success" href="">Edit</a>
+                                                       <!-- <a class="btn btn-success" href="">Edit</a>-->
                                                         <a class="btn btn-danger" href="{{route('food.delete',$data->id)}}">Delete</a></td>
-                                                        
+
                                                     </tr>
                                                     @endforeach
 

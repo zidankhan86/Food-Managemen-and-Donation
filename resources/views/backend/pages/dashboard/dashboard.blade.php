@@ -43,6 +43,18 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-lg-3">
+                            <div class="card">
+                                <div class="stat-widget-one">
+                                    <div class="stat-icon dib"><i class="ti-link color-danger border-danger"></i></div>
+                                    <div class="stat-content dib">
+                                        <div class="stat-text">Total<br>Donate Balance</div>
+                                        <div class="stat-digit">2,781</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
 @endsection
