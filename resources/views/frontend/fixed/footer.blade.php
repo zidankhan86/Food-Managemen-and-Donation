@@ -35,6 +35,7 @@
                          <div class="footer-info footer-open-hour">
                               <div class="section-title">
                                    <h2 class="wow fadeInUp" data-wow-delay="0.2s">Open 24/7</h2>
+                                   <h2>Donate & Smile</h2>
                               </div>
 
                          </div>

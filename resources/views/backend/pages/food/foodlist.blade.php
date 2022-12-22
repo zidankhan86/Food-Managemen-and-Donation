@@ -14,7 +14,6 @@
                                                     <tr>
                                                         <th>ID</th>
                                                         <th>Food Name</th>
-                                                        <th>User ID</th>
                                                         <th>Quantity</th>
                                                         <th>Action</th>
                                                     </tr>
@@ -24,8 +23,7 @@
                                                     <tr>
                                                         <th scope="col">{{$data->id}}</th>
                                                         <td scope="col">{{$data->food_name}}</td>
-                                                        <td scope="col">{{$data->user_id}}</td>
-                                                        <td>{{$data->quantity}}</td>
+                                                        <td >{{$data->quantity}}</td>
                                                       <td>
                                                        <!-- <a class="btn btn-success" href="">Edit</a>-->
                                                         <a class="btn btn-danger" href="{{route('food.delete',$data->id)}}">Delete</a></td>

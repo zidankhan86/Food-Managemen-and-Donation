@@ -12,13 +12,14 @@ class AuthController extends Controller
     public function signin(Request $req){
             $req->validate([
                 'name'=>'required',
-                'email'=>'required',
+                'email'=>'required|unique:users,email',
                 'address'=>'required',
-                'phone'=>'required',
-                'password'=>'required',
-                'phone'=>'regex:"/^\\+?[1-9][0-9]{7,14}$/"
-                '
+                'phone'=>'required|digits:11',
+                'password'=>'required|min:5',
+
+
             ]);
+
 
 
             User::create([
@@ -33,8 +34,6 @@ class AuthController extends Controller
             ]);
 
            // dd($req->all());
-
-
 
             return redirect()->back();
 
