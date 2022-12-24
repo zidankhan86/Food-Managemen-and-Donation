@@ -111,7 +111,7 @@ Donate::create([
 
     public function fail(Request $request)
     {
-        notify()->success('Transaction is fail');
+
          return redirect()->route('home');
 
 
@@ -120,7 +120,7 @@ Donate::create([
     public function cancel(Request $request)
     {
 
-        notify()->success('Transaction is canceled');
+        
         return redirect()->route('home');
 
 
