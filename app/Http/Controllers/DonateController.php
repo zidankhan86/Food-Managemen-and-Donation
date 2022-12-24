@@ -10,16 +10,17 @@ class DonateController extends Controller
 
     public function payment_list(){
         $paymentList=Donate::all();
+        $totalDonation= Donate::sum('amount');
 
-        return view('backend.pages.payment.payement', compact('paymentList'));
+        return view('backend.pages.payment.payement', compact('paymentList','totalDonation'));
     }
 
     public function donate()
     {
 
         $donate = Donate::paginate(5);
-
-        return view('backend.pages.donate.donate', compact('donate'));
+        $totalDonation= Donate::sum('amount');
+        return view('backend.pages.donate.donate', compact('donate','totalDonation'));
     }
     public function donate_form()
     {

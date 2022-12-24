@@ -23,7 +23,7 @@
                                                     @foreach($foodrequest as $data)
                                                     <tr>
                                                         <th scope="col">{{$data->id}}</th>
-                                                        <td scope="col">{{$data->food_id}}</td>
+                                                        <td scope="col">{{$data->food[0]->food_name}}</td>
                                                         <td scope="col">{{$data->status}}</td>
                                                         <td scope="col">
                                                        <!-- <a class="btn btn-info" href="">View</a>-->

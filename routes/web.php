@@ -145,6 +145,7 @@ Route::group(['middleware'=>'auth','adminchecker','prefix'=>'admin'], function()
     Route::get('/reject/{id}',[FoodController::class,'reject'])->name('reject');
 
 Route::get('/organization/profile',[OrganizationController::class,'profile'])->name('org.profile');
+Route::put('/profile/update',[OrganizationController::class,'update'])->name('profile.update');
 
 Route::get('/request/list',[FoodController::class,'request_list'])->name('requestFor.food');
 });

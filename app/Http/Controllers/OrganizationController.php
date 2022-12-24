@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\FoodRequest;
 use App\Models\Organization;
 use Illuminate\Http\Request;
@@ -46,5 +47,14 @@ class OrganizationController extends Controller
         $ngoFoodRequest = FoodRequest::where('user_id',auth()->user()->id)->get();
         // dd($ngoFoodRequest);
         return view('frontend.pages.profile.profile',compact('ngoFoodRequest'));
+    }
+    public function update(Request $request){
+        User::find(auth()->user()->id)->update([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'phone'=>$request->phone,
+            'address'=>$request->address,
+        ]);
+        return back();
     }
 }

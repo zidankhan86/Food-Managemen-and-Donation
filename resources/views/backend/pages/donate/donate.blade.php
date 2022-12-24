@@ -14,22 +14,22 @@
                 <table class="table table-hover ">
                     <thead>
                         <tr>
-                            <th scope="col">ID</th>
+                            <th >ID</th>
                             <th>Name</th>
                             <th>Phone</th>
                             <th>E-mail</th>
-                            <th scope="col">Amount</th>
+                            <th>Amount</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($donate as $data)
 
                         <tr>
-                            <th scope="col">{{$data->id}}</th>
-                            <th scope="col">{{$data->name}}</th>
-                            <th scope="col">{{$data->phone}}</th>
-                            <th scope="col">{{$data->email}}</th>
-                            <th scope="col">{{$data->amount}}</th>
+                            <td>{{$data->id}}</td>
+                            <td>{{$data->name}}</td>
+                            <td>{{$data->phone}}</td>
+                            <td>{{$data->email}}</td>
+                            <td>{{$data->amount}}</td>
 
                         </tr>
                         @endforeach
@@ -40,5 +40,11 @@
 
 
 {{$donate->links()}}
-
+<div class="container">
+    <div class="container">
+        <div class="mx-auto">
+            <h5 class="text-center">Total Donation collected: {{$totalDonation}} Taka</h5>
+        </div>
+    </div>
+</div>
                 @endsection

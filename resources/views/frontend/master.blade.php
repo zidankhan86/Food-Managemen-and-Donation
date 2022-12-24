@@ -30,7 +30,7 @@ http://www.templatemo.com/tm-515-eatery
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="{{url('/frontend/css/templatemo-style.css')}}">
 
-    
+
 
 </head>
 <body>
@@ -77,11 +77,7 @@ http://www.templatemo.com/tm-515-eatery
                    <form action="{{route('login')}}" method="post">
                        @csrf
 
-                       @if($errors->any())
-                          @foreach($errors->all() as $message)
-                          <p class="alert alert-danger">{{$message}}</p>
-                          @endforeach
-                          @endif
+                      
 
                         <div class="form-group">
                              <label>Email address</label>

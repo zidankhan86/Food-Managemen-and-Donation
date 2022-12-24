@@ -8,8 +8,8 @@
 
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-                              <h2>Dishes</h2>
-                              <h4>Our Service &amp; Food</h4>
+                              <h2>Food Added For Donation</h2>
+                              <h4>By Volunteer &amp; restaurant</h4>
                          </div>
                     </div>
 
@@ -29,7 +29,7 @@
                                        @if(auth()->user()->role !='restaurant')
                                     <a href="{{route('food.request',$data->id)}}" class="btn btn-primary">Food request</a>
                                     @endif
-                                    @endauth 
+                                    @endauth
 
 
                                  </div></div>

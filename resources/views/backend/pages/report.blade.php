@@ -1,6 +1,14 @@
 @extends('backend.admin')
 @section('content')
-
+<div class="container">
+    <div class="container">
+        <div class="container mx-auto my-5">
+            <h2 class="text-center">
+                Food Request Report
+            </h2>
+        </div>
+    </div>
+</div>
 
 <div class="container"  >
     <div class="container">
@@ -30,8 +38,8 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Food ID</th>
-                    <th>User ID</th>
+                    <th>Food Name</th>
+                    <th>Orgnanization name</th>
                     <th>Status</th>
 
                 </tr>
@@ -40,10 +48,10 @@
                 @foreach($foodrequest as $data)
                 <tr>
                     <th scope="col">{{$data->id}}</th>
-                    <td scope="col">{{$data->food_id}}</td>
-                    <td scope="col">{{$data->user_id}}</td>
+                    <td scope="col">{{$data->food[0]->food_name}}</td>
+                    <td scope="col">{{$data->organization->name}}</td>
                     <td scope="col">{{$data->status}}</td>
-                    
+
 
                    <!-- <a class="btn btn-info" href="">View</a>-->
 

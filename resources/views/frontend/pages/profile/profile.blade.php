@@ -12,28 +12,28 @@
 
         </div>
         <div class="col-md-3">
-            <form action="" method="POST" enctype="multipart/form-data">
+            <form action="{{route('profile.update')}}" method="POST" enctype="multipart/form-data">
                 @method('PUT')
                 @csrf
                 <br><br><br><br><br><br>
 
                     <div>
                         <label for="">Name:</label>
-                        <input required value="{{auth()->user()->name   }}" name="name" type="text" class="form-contro" required placeholder="Enter name">
+                        <input required value="{{auth()->user()->name   }}" name="name" type="text" class="form-control" required placeholder="Enter name">
                     </div>
                     <div>
                         <label for="">Email:</label>
-                        <input required value="{{auth()->user()->email}}" name="email" type="email" class="form-contro" required placeholder="Enter email">
+                        <input required value="{{auth()->user()->email}}" name="email" type="email" class="form-control" required placeholder="Enter email">
                     </div>
                     <div>
                         <label for="">Phone:</label>
-                        <input required value="{{auth()->user()->phone}}" name="phone" type="text" class="form-contro" required placeholder="Enter number">
+                        <input required value="{{auth()->user()->phone}}" name="phone" type="text" class="form-control" required placeholder="Enter number">
                     </div>
                     <div>
                         <label for="">Address:</label>
-                        <input required value="{{auth()->user()->address}}" name="address" type="text" class="form-contro" required placeholder="Enter address">
+                        <input required value="{{auth()->user()->address}}" name="address" type="text" class="form-control" required placeholder="Enter address">
                     </div>
-
+                       <br> <button type="submit" class="btn btn-success">Update</button>
                     </div>
                 </form>
                 </div>

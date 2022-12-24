@@ -16,6 +16,7 @@
                                                         <th>Food Name</th>
                                                         <th>Food Image</th>
                                                         <th>Quantity</th>
+                                                        <th>Restaurant Name</th>
 
                                                     </tr>
                                                 </thead>
@@ -26,9 +27,8 @@
                                                         <td scope="col">{{$data->food_name}}</td>
                                                         <td> <img width="200px" src="{{url('/uploads/',$data->image)}}" alt="" srcset=""></td>
                                                         <td >{{$data->quantity}}</td>
-                                                      <td>
-                                                       <!-- <a class="btn btn-success" href="">Edit</a>-->
-                                                      <!--  <a class="btn btn-danger" href="{})}}">Delete</a></td>-->
+                                                        <td> {{$data->restaurant->name}}</td>
+
 
                                                     </tr>
                                                     @endforeach

@@ -54,7 +54,7 @@ $req->validate(
             return back();
     }
     public function request_list(){
-        $foodrequest=FoodRequest::paginate(5);
+        $foodrequest=FoodRequest::with('food')->paginate(5);
 
        return view('backend.pages.food.food_request_list',compact('foodrequest'));
     }
@@ -93,7 +93,7 @@ $req->validate(
         return view('frontend.pages.foodFrontend');
 
         }
-        
+
         public function foodFrontend(Request $request){
             $imageName=null;
             if ($request->hasFile('image')) {
