@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use DB;
 use App\Models\Donate;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 use App\Library\SslCommerz\SslCommerzNotification;
 
 
@@ -103,7 +104,7 @@ Donate::create([
     public function success(Request $request)
     {
 
-         notify()->success('success','Transaction is successful');
+        Alert::success('Success', 'Success payment');
          return back();
 
 
@@ -111,7 +112,7 @@ Donate::create([
 
     public function fail(Request $request)
     {
-
+        Alert::warning('Oppps !!!', 'Failed Payment');
          return redirect()->route('home');
 
 
@@ -120,7 +121,7 @@ Donate::create([
     public function cancel(Request $request)
     {
 
-        
+        Alert::error('Oppps !!!', 'Cancelled Payment');
         return redirect()->route('home');
 
 

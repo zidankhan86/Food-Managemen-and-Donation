@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Food;
-use App\Models\FoodRequest;
 use App\Models\User;
+use App\Models\FoodRequest;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class FoodController extends Controller
 {
@@ -51,6 +52,7 @@ $req->validate(
                 'user_id'=>auth()->user()->id,
                 'food_id'=>$food->id
             ]);
+            Alert::success('Success !!!', 'Success Food Request');
             return back();
     }
     public function request_list(){

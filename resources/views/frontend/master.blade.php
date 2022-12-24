@@ -45,6 +45,7 @@ http://www.templatemo.com/tm-515-eatery
 
      <!-- HOME -->
      <section id="home" class="slider" data-stellar-background-ratio="0.5">
+        @include('sweetalert::alert')
 
           @yield('content')
      </section>
@@ -77,7 +78,7 @@ http://www.templatemo.com/tm-515-eatery
                    <form action="{{route('login')}}" method="post">
                        @csrf
 
-                      
+
 
                         <div class="form-group">
                              <label>Email address</label>
@@ -173,6 +174,7 @@ http://www.templatemo.com/tm-515-eatery
      <script src="{{url('/frontend/js/smoothscroll.js')}}"></script>
      <script src="{{url('/frontend/js/custom.js')}}"></script>
 
+     @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 
 </body>
 </html>

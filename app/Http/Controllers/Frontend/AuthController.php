@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AuthController extends Controller
 {
@@ -33,7 +34,8 @@ class AuthController extends Controller
             ]);
 
            // dd($req->all());
-           notify()->success('Login Successful');
+           Alert::success('Success', 'Success Registration');
+
 
             return redirect()->back();
 
@@ -54,12 +56,14 @@ public function login(Request $req){
     {
         return redirect()->route('home');
     }
+    Alert::success('Success', 'Success Login');
     return redirect()->back();
 
 
 }
 public function Logout_frontend(){
         Auth::logout();
+        Alert::success('Success', 'Success logout');
         return redirect()->route('home');
 
 }
