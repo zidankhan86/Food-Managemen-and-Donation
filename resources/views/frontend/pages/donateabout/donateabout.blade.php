@@ -64,7 +64,7 @@
 
                    <!-- CONTACT FORM -->
                    <form action="{{route('ssl.payment')}}" method="post" class="wow fadeInUp" id="contact-form" role="form" data-wow-delay="0.8s">
-@csrf
+                        @csrf
                         <!-- IF MAIL SENT SUCCESSFUL  // connect this with custom JS -->
                         <h6 class="text-success">Your message has been sent successfully.</h6>
 
