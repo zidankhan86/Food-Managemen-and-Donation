@@ -21,7 +21,6 @@ class AuthController extends Controller
             ]);
 
 
-
             User::create([
 
             'name'=>$req->name,
@@ -34,6 +33,7 @@ class AuthController extends Controller
             ]);
 
            // dd($req->all());
+           notify()->success('Login Successful');
 
             return redirect()->back();
 

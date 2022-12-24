@@ -30,6 +30,8 @@ http://www.templatemo.com/tm-515-eatery
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="{{url('/frontend/css/templatemo-style.css')}}">
 
+    
+
 </head>
 <body>
 
@@ -43,6 +45,7 @@ http://www.templatemo.com/tm-515-eatery
 
      <!-- HOME -->
      <section id="home" class="slider" data-stellar-background-ratio="0.5">
+
           @yield('content')
      </section>
 
@@ -173,6 +176,7 @@ http://www.templatemo.com/tm-515-eatery
      <script src="{{url('/frontend/js/jquery.magnific-popup.min.js')}}"></script>
      <script src="{{url('/frontend/js/smoothscroll.js')}}"></script>
      <script src="{{url('/frontend/js/custom.js')}}"></script>
+
 
 </body>
 </html>

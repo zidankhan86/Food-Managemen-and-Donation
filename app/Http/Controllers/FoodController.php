@@ -61,15 +61,21 @@ $req->validate(
 
         public function approve($id){
             $foodrequest = FoodRequest::find($id);
-            $foodrequest->update([
-                'status'=>'approve'
-            ]);
             $food = Food::where('id',$foodrequest->food_id)->first();
+            // dd($food);
+            if($food->quantity >=0 ){
+                $foodrequest->update([
+                    'status'=>'approve'
+                ]);
+                $food = Food::where('id',$foodrequest->food_id)->first();
 
-            $food->update([
-                'quantity'=>$food->quantity - 1,
-            ]);
-     notify()->success('Food Request Approved');
+                $food->update([
+                    'quantity'=>$food->quantity - 1,
+                ]);
+                notify()->success('Food Request Approved');
+            }else{
+                notify()->error('Food quantity is low ');
+            }
 
             return back();
 
@@ -87,6 +93,7 @@ $req->validate(
         return view('frontend.pages.foodFrontend');
 
         }
+        
         public function foodFrontend(Request $request){
             $imageName=null;
             if ($request->hasFile('image')) {

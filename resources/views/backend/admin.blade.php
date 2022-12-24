@@ -37,21 +37,21 @@
 
 <body>
 
-    
+
 
 @include('backend.fixed.sidebar')
     <!-- /# sidebar -->
 
-   
+
 
     @include('backend.fixed.header')
 
 
     <div class="content-wrap">
          <x:notify-messages />
-        
+
         @yield('content')
-        
+
 
     </div>
 
