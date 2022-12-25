@@ -44,7 +44,9 @@ $req->validate(
                 "quantity"=>$req->quantity,
                 "image"=>$imageName
             ]);
+            notify()->success('Food Added Successfully');
             return redirect()->back();
+
     }
     public function food_request($id){
             $food = Food::find($id);
@@ -109,6 +111,7 @@ $req->validate(
                 'image'=>$imageName
             ]);
             return back();
+
         }
         public function food_delete($food_id){
 
