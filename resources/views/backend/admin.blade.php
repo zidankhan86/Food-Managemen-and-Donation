@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- theme meta -->
     <meta name="theme-name" content="focus" />
-    <title>Food Donation : Creative Admin Dashboard</title>
+    <title>Food Management and Donation System</title>
     <!-- ================= Favicon ================== -->
     <!-- Standard -->
     <link rel="shortcut icon" href="{{url('http://placehold.it/64.png/000/fff')}}">

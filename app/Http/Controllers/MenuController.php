@@ -18,4 +18,10 @@ class MenuController extends Controller
 
         return view('frontend.pages.gallery');
     }
+
+    public function details($dishes_id)
+    {
+        $foodDetails=Food::find($dishes_id);
+        return view('frontend.pages.details',compact('foodDetails'));
+    }
 }

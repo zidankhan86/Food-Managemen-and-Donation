@@ -48,11 +48,12 @@ $req->validate(
             return redirect()->back();
 
     }
-    public function food_request($id){
+    public function food_request(Request $request,$id){
             $food = Food::find($id);
             FoodRequest::create([
                 'user_id'=>auth()->user()->id,
-                'food_id'=>$food->id
+                'food_id'=>$food->id,
+                'quantity'=>$request->quantity
             ]);
             Alert::success('Success !!!', 'Success Food Request');
             return back();
@@ -65,6 +66,7 @@ $req->validate(
 
         public function approve($id){
             $foodrequest = FoodRequest::find($id);
+            
             $food = Food::where('id',$foodrequest->food_id)->first();
             // dd($food);
             if($food->quantity >=0 ){
@@ -74,7 +76,7 @@ $req->validate(
                 $food = Food::where('id',$foodrequest->food_id)->first();
 
                 $food->update([
-                    'quantity'=>$food->quantity - 1,
+                    'quantity'=>$food->quantity - $foodrequest->quantity,
                 ]);
                 notify()->success('Food Request Approved');
             }else{
@@ -119,6 +121,10 @@ $req->validate(
             $delete->delete();
             notify()->success('Delete Successful');
             return redirect()->route('food.list');
+        }
+        public function selectQauntity($id){
+            $food = Food::find($id);
+            return view('frontend.pages.selectQuantity',compact('food'));
         }
 
 }

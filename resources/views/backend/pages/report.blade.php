@@ -40,6 +40,7 @@
                     <th>ID</th>
                     <th>Food Name</th>
                     <th>Orgnanization name</th>
+                    <th>Request Hours and Day</th>
                     <th>Status</th>
 
                 </tr>
@@ -50,6 +51,7 @@
                     <th scope="col">{{$data->id}}</th>
                     <td scope="col">{{$data->food[0]->food_name}}</td>
                     <td scope="col">{{$data->organization->name}}</td>
+                    <td scope="col">{{$data->created_at->diffForHumans()}}</td>
                     <td scope="col">{{$data->status}}</td>
 
 

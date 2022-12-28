@@ -59,6 +59,7 @@ Route::get('/visitor/donate',[DonateAboutController::class,'visitor_donate'])->n
 Route::post('/user/signin',[AuthController::class,'signin'])->name('signin');
 Route::post('/user/login',[AuthController::class,'login'])->name('login');
 Route::get('/menu/dishes',[MenuController::class,'menu'])->name('menu.dishes');
+Route::get('/menu/dishes/details/{dishes_id}', [MenuController::class, 'details'])->name('menu.dishes.details');
 Route::post('/restaurant/donate',[RestaurantController::class,'donateForm'])->name('restaurant.donateForm');
 
 Route::get('/food/frontend',[FoodController::class,'food_frontend'])->name('food.frontend');
@@ -150,7 +151,8 @@ Route::put('/profile/update',[OrganizationController::class,'update'])->name('pr
 Route::get('/request/list',[FoodController::class,'request_list'])->name('requestFor.food');
 });
 Route::group(['middleware'=>'CheckOrganizationMiddleware'],function(){
-    Route::get('food/request/{food_id}',[FoodController::class,'food_request'])->name('food.request');
+    Route::get('food/request/select-quantity/{food_id}',[FoodController::class,'selectQauntity'])->name('food.request.selectQauntity');
+    Route::post('food/request/{food_id}',[FoodController::class,'food_request'])->name('food.request');
 });
 
 

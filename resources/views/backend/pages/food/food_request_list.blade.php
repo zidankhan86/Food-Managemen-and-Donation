@@ -14,8 +14,10 @@
                                                 <thead>
                                                     <tr>
                                                         <th>ID</th>
-                                                        <th>Food ID</th>
+                                                        <th>Food Name</th>
+                                                        <th>Organization Name</th>
                                                         <th>Status</th>
+                                                        <th>Quantity</th>
                                                         <th>Action</th>
                                                     </tr>
                                                 </thead>
@@ -24,7 +26,9 @@
                                                     <tr>
                                                         <th scope="col">{{$data->id}}</th>
                                                         <td scope="col">{{$data->food[0]->food_name}}</td>
+                                                        <td scope="col">{{$data->organization->name}}</td>
                                                         <td scope="col">{{$data->status}}</td>
+                                                        <td scope="col">{{$data->quantity}}</td>
                                                         <td scope="col">
                                                        <!-- <a class="btn btn-info" href="">View</a>-->
                                                         <a class="btn btn-success" href="{{route('approve',$data->id)}}">Approve</a>

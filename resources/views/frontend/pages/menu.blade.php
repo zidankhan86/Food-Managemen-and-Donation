@@ -26,8 +26,9 @@
 
                                    @auth
 
-                                       @if(auth()->user()->role !='restaurant')
-                                    <a href="{{route('food.request',$data->id)}}" class="btn btn-primary">Food request</a>
+                                    @if(auth()->user()->role !='restaurant')
+                                        <a href="{{route('menu.dishes.details', $data->id)}}" class="btn btn-success">View Details</a>
+                                        <a href="{{route('food.request.selectQauntity',$data->id)}}" class="btn btn-primary">CONFIRM REQUEST</a>
                                     @endif
                                     @endauth
 
