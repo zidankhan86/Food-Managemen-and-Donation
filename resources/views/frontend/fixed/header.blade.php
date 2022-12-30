@@ -1,5 +1,5 @@
 <!-- MENU -->
-<section class="navbar custom-navbar navbar-fixed-top" role="navigation" style="background-color:brown; ">
+<section class="navbar custom-navbar navbar-fixed-top" role="navigation" style="">
      <div class="container">
 
           <div class="navbar-header">
@@ -14,12 +14,12 @@
           <!-- MENU LINKS -->
           <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-nav-first">
-                    <li><a href="{{route('home')}}" class="smoothScroll" style="color:white ;">Home</a></li>
-                    <li><a href="{{route('about')}}" class="smoothScroll" style="color: white;">About</a></li>
-                    <li><a href="{{route('gallery')}}" class="smoothScroll" style="color: white;">Gallery</a></li>
-                    <li><a href="{{route('contract')}}" class="smoothScroll" style="color:white ;">Contact</a></li>
+                    <li><a href="{{route('home')}}" class="smoothScroll" style="color:rgb(78, 5, 5) ;">Home</a></li>
+                    <li><a href="{{route('about')}}" class="smoothScroll" style="color: rgb(56, 8, 8);">About</a></li>
+                    <li><a href="{{route('gallery')}}" class="smoothScroll" style="color: rgb(59, 8, 8);">Gallery</a></li>
+                    <li><a href="{{route('contract')}}" class="smoothScroll" style="color:rgb(61, 6, 6) ;">Contact</a></li>
 
-                    <li><a href="{{route('menu.dishes')}}" class="smoothScroll" style="color:white ;">Food</a></li>
+                    <li><a href="{{route('menu.dishes')}}" class="smoothScroll" style="color:rgb(97, 2, 2) ;">Food</a></li>
                </ul>
 
                <ul class="nav navbar-nav navbar-right">
@@ -34,8 +34,8 @@
                          {{auth()->user()->name}}
                          </button>
                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                              <li><a href="{{route('org.profile')}}"  class="text-primary" style="color:black ;">Profile</a></li>
-                              <li><a href="{{route('Logout_frontend')}}" class="text-primary" style="color: black;">Logout</a></li>
+                              <li><a href="{{route('org.profile')}}"  class="text-primary" style="color:rgb(37, 3, 3) ;">Profile</a></li>
+                              <li><a href="{{route('Logout_frontend')}}" class="text-primary" style="color: rgb(114, 7, 7);">Logout</a></li>
                          </ul>
 
 

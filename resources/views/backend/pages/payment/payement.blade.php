@@ -19,7 +19,6 @@
                                                     <th scope="col">Name</th>
                                                     <th scope="col">Email</th>
                                                     <th scope="col">City Name</th>
-                                                    
                                                     <th scope="col">Contract</th>
                                                     <th scope="col">Amount</th>
 

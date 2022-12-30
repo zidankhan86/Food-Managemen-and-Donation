@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-     <title>Food Managenemt and Donation System</title>
+     <title>Food Donation System</title>
 <!--
 
 Eatery Cafe Template
