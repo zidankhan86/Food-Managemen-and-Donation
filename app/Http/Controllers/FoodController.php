@@ -66,7 +66,7 @@ $req->validate(
 
         public function approve($id){
             $foodrequest = FoodRequest::find($id);
-            
+
             $food = Food::where('id',$foodrequest->food_id)->first();
             // dd($food);
             if($food->quantity >=0 ){
@@ -123,8 +123,54 @@ $req->validate(
             return redirect()->route('food.list');
         }
         public function selectQauntity($id){
-            $food = Food::find($id);
+            $Food = Food::find($id);
             return view('frontend.pages.selectQuantity',compact('food'));
+        }
+        public function addToCart($id)
+        {
+            $Food = Food::find($id);
+
+            //case 1: if cart empty
+            $getCart = session()->get('cart');
+            if (empty($getCart)) {
+                    $newCart = [
+                        $Food->id => [
+                            'id' => $Food->id,
+                            'name' => $Food->name,
+                            'quantity' => 1,
+                            'price' => $Food->price,
+                            'subtotal' => $Food->price * 1,
+                        ]
+                    ];
+                    session()->put('cart', $newCart);
+                return view('frontend.pages.layouts.cart');
+                }
+
+            //step 2 : cart not empty
+
+            if(array_key_exists($id,$getCart)){
+               //product exist
+                $getCart[$id]['quantity']=$getCart[$id]['quantity']+1;
+                $getCart[$id]['subtotal']=$getCart[$id]['quantity'] * $getCart[$id]['price'];
+                \session()->put('cart',$getCart);
+
+            }else
+            {
+                //product not exist
+
+                $getCart[$id]=[
+                    'id' => $Food->id,
+                    'name' => $Food->name,
+                    'quantity' => 1,
+                    'price' => $Food->price,
+                    'subtotal' => $Food->price * 1,
+                ];
+
+                \session()->put('cart',$getCart);
+            }
+
+
+            return view('frontend.pages.layouts.cart');
         }
 
 }

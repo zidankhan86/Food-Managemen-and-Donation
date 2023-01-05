@@ -68,7 +68,8 @@ Route::post('/food/frontend-submit',[FoodController::class,'foodFrontend'])->nam
 Route::get('/report/generate',[ReportCotroller::class,'report_generate'])->name('report.generate');
 Route::post('/report/generate/submit',[ReportCotroller::class,'report_generate'])->name('report.generate.submit');
 Route::get('/gallery',[MenuController::class,'gallery'])->name('gallery');
-
+Route::get('/add/cart/{id}',[FoodController::class,'addtocart'])->name('add.to.cart');
+Route::get('/clear-cart',[HomeController::class,'clearCart'])->name('cart.clear');
 
     Route::group(['middleware'=>'auth'], function(){
 
@@ -80,14 +81,14 @@ Route::get('/gallery',[MenuController::class,'gallery'])->name('gallery');
 //backend
 
 
-Route::get('/login',[LoginController::class,'showLogin'])->name('show.login');
-Route::post('/login/process', [LoginController::class, 'login_process'])->name('login.process');
+    Route::get('/login',[LoginController::class,'showLogin'])->name('show.login');
+    Route::post('/login/process', [LoginController::class, 'login_process'])->name('login.process');
 
 
 
 
-Route::group(['middleware'=>'auth','adminchecker','prefix'=>'admin'], function()
-{
+    Route::group(['middleware'=>'auth','adminchecker','prefix'=>'admin'], function()
+    {
 
     Route::get('/logout', [LoginController::class, 'Logout'])->name('admin.logout');
 
@@ -145,14 +146,14 @@ Route::group(['middleware'=>'auth','adminchecker','prefix'=>'admin'], function()
     Route::get('/approve/{id}',[FoodController::class,'approve'])->name('approve');
     Route::get('/reject/{id}',[FoodController::class,'reject'])->name('reject');
 
-Route::get('/organization/profile',[OrganizationController::class,'profile'])->name('org.profile');
-Route::put('/profile/update',[OrganizationController::class,'update'])->name('profile.update');
+    Route::get('/organization/profile',[OrganizationController::class,'profile'])->name('org.profile');
+    Route::put('/profile/update',[OrganizationController::class,'update'])->name('profile.update');
 
-Route::get('/request/list',[FoodController::class,'request_list'])->name('requestFor.food');
-});
-Route::group(['middleware'=>'CheckOrganizationMiddleware'],function(){
+    Route::get('/request/list',[FoodController::class,'request_list'])->name('requestFor.food');
+    });
+    Route::group(['middleware'=>'CheckOrganizationMiddleware'],function(){
     Route::get('food/request/select-quantity/{food_id}',[FoodController::class,'selectQauntity'])->name('food.request.selectQauntity');
     Route::post('food/request/{food_id}',[FoodController::class,'food_request'])->name('food.request');
-});
+    });
 
 

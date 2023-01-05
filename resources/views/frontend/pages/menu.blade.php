@@ -27,8 +27,16 @@
                                    @auth
 
                                     @if(auth()->user()->role !='restaurant')
-                                        <a href="{{route('menu.dishes.details', $data->id)}}" class="btn btn-success">View Details</a>
-                                        <a href="{{route('food.request.selectQauntity',$data->id)}}" class="btn btn-primary">CONFIRM REQUEST</a>
+                                        <div class="row" style="margin-bottom: 3px">
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-4"><a href="{{route('menu.dishes.details', $data->id)}}" class="btn btn-success">View Details</a>
+                                              </div>
+                                            <div class="col-md-4">  <a href="{{route('food.request.selectQauntity',$data->id)}}" class="btn btn-primary">CONFIRM REQUEST</a></div>
+                                            <div class="col-md-2"></div>
+                                        </div>
+                                        <div class="row">
+                                            <a href="{{route('add.to.cart',$data->id)}}" class="btn btn-info">Add to card</a>
+                                        </div>
                                     @endif
                                     @endauth
 
