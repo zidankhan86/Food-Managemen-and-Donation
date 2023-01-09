@@ -136,13 +136,14 @@ $req->validate(
                     $newCart = [
                         $Food->id => [
                             'id' => $Food->id,
-                            'name' => $Food->name,
+                            'name' => $Food->food_name,
                             'quantity' => 1,
-                            'price' => $Food->price,
-                            'subtotal' => $Food->price * 1,
+                            'image' => $Food->image,
+
                         ]
                     ];
                     session()->put('cart', $newCart);
+                    notify()->success('success','product added to cart success');
                 return view('frontend.pages.layouts.cart');
                 }
 
@@ -151,7 +152,7 @@ $req->validate(
             if(array_key_exists($id,$getCart)){
                //product exist
                 $getCart[$id]['quantity']=$getCart[$id]['quantity']+1;
-                $getCart[$id]['subtotal']=$getCart[$id]['quantity'] * $getCart[$id]['price'];
+                notify()->success('success','product updated in cart');
                 \session()->put('cart',$getCart);
 
             }else
@@ -162,9 +163,9 @@ $req->validate(
                     'id' => $Food->id,
                     'name' => $Food->name,
                     'quantity' => 1,
-                    'price' => $Food->price,
-                    'subtotal' => $Food->price * 1,
+                    'image' => $Food->image,
                 ];
+                notify()->success('success','product added to cart success');
 
                 \session()->put('cart',$getCart);
             }

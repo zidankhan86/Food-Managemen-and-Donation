@@ -29,7 +29,7 @@ $total=0;
                                 <div class="card-body p-4">
                                     <div class="row d-flex justify-content-between align-items-center">
                                         <div class="col-md-2 col-lg-2 col-xl-2">
-                                            
+
 
                                         </div>
                                         <div class="col-md-3 col-lg-3 col-xl-3">
@@ -50,12 +50,10 @@ $total=0;
                                             </button>
                                         </div>
                                         <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                            <h5 class="mb-0">{{$data['price']}} .BDT  x {{$data['quantity']}} = {{$data['subtotal']}} .BDT</h5>
+                                            <h5 class="mb-0">  Free {{$data['quantity']}} </h5>
                                         </div>
 
-                                                @php
-                                                $total=$total+$data['subtotal'];
-                                                @endphp
+                                                
                                         <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                                             <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
                                         </div>
@@ -72,7 +70,7 @@ $total=0;
                     <div class="card mb-4">
                         <div class="card-body p-4 d-flex flex-row">
                             <div class="form-outline flex-fill">
-                            Total: {{$total}} .BDT
+
                             </div>
                             <a href="{{route('cart.clear')}}" class="btn btn-outline-warning btn-lg ms-3">Clear Cart</a>
                         </div>
