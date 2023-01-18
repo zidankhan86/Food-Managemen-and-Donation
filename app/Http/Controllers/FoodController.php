@@ -124,7 +124,7 @@ $req->validate(
         }
         public function selectQauntity($id){
             $Food = Food::find($id);
-            return view('frontend.pages.selectQuantity',compact('food'));
+            return view('frontend.pages.selectQuantity',compact('Food'));
         }
         public function addToCart($id)
         {

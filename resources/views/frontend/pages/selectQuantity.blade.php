@@ -7,7 +7,7 @@
         <div class="container mt-4">
             <div class="container">
 
-        <form action="{{route('food.request',$food->id)}}" method="post">
+        <form action="{{route('food.request',$Food->id)}}" method="post">
             @csrf
             <div class="mb-3">
                 <h1>Enter Food Quantity</h1><br>
