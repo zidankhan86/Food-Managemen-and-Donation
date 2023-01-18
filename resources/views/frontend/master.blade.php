@@ -48,6 +48,7 @@ http://www.templatemo.com/tm-515-eatery
         @include('sweetalert::alert')
 
           @yield('content')
+          
      </section>
 
 
