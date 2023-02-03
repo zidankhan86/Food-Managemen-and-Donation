@@ -20,6 +20,9 @@
                     <li><a href="{{route('contract')}}" class="smoothScroll" style="color:rgb(61, 6, 6) ;">Contact</a></li>
 
                     <li><a href="{{route('menu.dishes')}}" class="smoothScroll" style="color:rgb(97, 2, 2) ;">Food</a></li>
+                    <li><a href="{{route('menu.dishes')}}" class="smoothScroll" style="color:rgb(97, 2, 2) ;">Food</a></li>
+                    <li><a href="{{route('menu.dishes')}}" class="smoothScroll" style="color:rgb(97, 2, 2) ;">Food</a></li>
+                    <li><a href="{{route('menu.dishes')}}" class="smoothScroll" style="color:rgb(97, 2, 2) ;">Food</a></li>
                </ul>
 
                <ul class="nav navbar-nav navbar-right">
