@@ -14,15 +14,13 @@
           <!-- MENU LINKS -->
           <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-nav-first">
-                    <li><a href="{{route('home')}}" class="smoothScroll" style="color:rgb(78, 5, 5) ;">Home</a></li>
-                    <li><a href="{{route('about')}}" class="smoothScroll" style="color: rgb(56, 8, 8);">About</a></li>
-                    <li><a href="{{route('gallery')}}" class="smoothScroll" style="color: rgb(59, 8, 8);">Gallery</a></li>
-                    <li><a href="{{route('contract')}}" class="smoothScroll" style="color:rgb(61, 6, 6) ;">Contact</a></li>
+                    <li><a href="{{route('home')}}" class="smoothScroll" style="color:rgb(24, 22, 22) ;">Home</a></li>
+                    <li><a href="{{route('about')}}" class="smoothScroll" style="color: rgb(10, 9, 9);">About</a></li>
+                    <li><a href="{{route('gallery')}}" class="smoothScroll" style="color: rgb(15, 6, 6);">Gallery</a></li>
+                    <li><a href="{{route('contract')}}" class="smoothScroll" style="color:rgb(17, 15, 15) ;">Contact</a></li>
 
-                    <li><a href="{{route('menu.dishes')}}" class="smoothScroll" style="color:rgb(97, 2, 2) ;">Food</a></li>
-                    <li><a href="{{route('menu.dishes')}}" class="smoothScroll" style="color:rgb(97, 2, 2) ;">Food</a></li>
-                    <li><a href="{{route('menu.dishes')}}" class="smoothScroll" style="color:rgb(97, 2, 2) ;">Food</a></li>
-                    <li><a href="{{route('menu.dishes')}}" class="smoothScroll" style="color:rgb(97, 2, 2) ;">Food</a></li>
+                    <li><a href="{{route('menu.dishes')}}" class="smoothScroll" style="color:rgb(15, 14, 14) ;">Food</a></li>
+
                </ul>
 
                <ul class="nav navbar-nav navbar-right">
