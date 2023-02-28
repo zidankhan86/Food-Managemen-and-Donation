@@ -47,8 +47,9 @@ http://www.templatemo.com/tm-515-eatery
      <section id="home" class="slider" data-stellar-background-ratio="0.5">
         @include('sweetalert::alert')
 
+
           @yield('content')
-          
+
      </section>
 
 
