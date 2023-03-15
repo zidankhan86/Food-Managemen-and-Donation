@@ -25,9 +25,10 @@
                                                     <tr>
                                                         <th scope="col">{{$data->id}}</th>
                                                         <td scope="col">{{$data->food_name}}</td>
-                                                        <td> <img width="200px" src="{{url('/uploads/',$data->image)}}" alt="" srcset=""></td>
+                                                        <td> <img width="200px" src="{{url('/uploads/'.$data->image)}}" alt="" srcset=""></td>
                                                         <td >{{$data->quantity}}</td>
                                                         <td> {{$data->restaurant->name}}</td>
+                                                        
 
 
                                                     </tr>
