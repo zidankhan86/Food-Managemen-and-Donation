@@ -14,7 +14,7 @@ class CustomerController extends Controller
 
     }
     public function customer_form(){
-        // return view('backend.pages.customer.customer_form');
+         
         return view('backend.pages.customer.customer_form');
     }
     public function store(Request $req){

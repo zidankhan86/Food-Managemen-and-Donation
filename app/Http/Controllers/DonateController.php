@@ -31,12 +31,12 @@ class DonateController extends Controller
     public function store(Request $req)
     {
 
-        $req->validate([
-'name'=>'Required',
-'phone'=>'Required',
-'amount'=>'Required'
+                $req->validate([
+        'name'=>'Required',
+        'phone'=>'Required',
+        'amount'=>'Required'
 
-        ]);
+                ]);
         // dd($req->all());
        // Donate::create([ ]);
         //return redirect()->route('donate.list');

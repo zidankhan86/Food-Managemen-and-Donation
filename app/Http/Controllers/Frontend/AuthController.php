@@ -50,7 +50,7 @@ public function login(Request $req){
 
  ]);
 
-    $login=$req->except('_token');
+    $login = $req->except('_token');
 
     if(Auth::attempt($login))
     {

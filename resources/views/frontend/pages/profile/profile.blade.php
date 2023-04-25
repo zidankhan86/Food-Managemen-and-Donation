@@ -19,7 +19,7 @@
 
                     <div>
                         <label for="">Name:</label>
-                        <input required value="{{auth()->user()->name   }}" name="name" type="text" class="form-control" required placeholder="Enter name">
+                        <input required value="{{auth()->user()->name}}" name="name" type="text" class="form-control" required placeholder="Enter name">
                     </div>
                     <div>
                         <label for="">Email:</label>

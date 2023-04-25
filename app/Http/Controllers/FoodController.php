@@ -22,14 +22,14 @@ class FoodController extends Controller
     }
     public function food_store(Request $req){
         //  dd($req->all());
-$req->validate(
-[
-'food_name'=>'required',
-'user_id'=>'required',
-'quantity'=>'required',
-'image'=>'required'
-]
-);
+            $req->validate(
+            [
+            'food_name'=>'required',
+            'user_id'=>'required',
+            'quantity'=>'required',
+            'image'=>'required'
+            ]
+            );
 
         $imageName=null;
         if ($req->hasFile('image')) {
@@ -63,6 +63,7 @@ $req->validate(
 
        return view('backend.pages.food.food_request_list',compact('foodrequest'));
     }
+    //Approve
 
         public function approve($id){
             $foodrequest = FoodRequest::find($id);
@@ -126,6 +127,10 @@ $req->validate(
             $Food = Food::find($id);
             return view('frontend.pages.selectQuantity',compact('Food'));
         }
+
+
+
+        // Add To Cart
         public function addToCart($id)
         {
             $Food = Food::find($id);

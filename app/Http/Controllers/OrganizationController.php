@@ -13,6 +13,9 @@ class OrganizationController extends Controller
     {
 
         $org=Organization::paginate(5);
+
+//$organizations = User::where('role', 'organization')->get();
+
         return view(('backend.pages.organization.organization'),compact('org'));
     }
     public function organization_form()

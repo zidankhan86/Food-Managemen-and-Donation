@@ -5,6 +5,7 @@
 <br>
 <br>
 <form action="{{route('food.store')}}" method="POST" enctype="multipart/form-data">
+    
         @csrf
         @if($errors->any())
         @foreach($errors->all() as $message)
